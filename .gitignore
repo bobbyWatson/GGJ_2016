@@ -19,6 +19,7 @@ ExportedObj/
 *.svd
 Assets/scenes/Elie.unity
 /Assets/scenes/Louis.*
+/Assets/scenes/Manu.unity
 Temp/
 Library/
 
