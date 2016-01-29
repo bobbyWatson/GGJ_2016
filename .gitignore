@@ -17,6 +17,9 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
+Assets/scenes.Elie.unity
+Temp/
+Library/
 
 
 # Unity3D generated meta files
