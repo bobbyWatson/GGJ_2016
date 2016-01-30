@@ -5,7 +5,8 @@ using System.Collections;
 [CreateAssetMenu(fileName = "newGroup", menuName = "Group Config", order = 0)]
 public class GroupeParam : ScriptableObject {
 
-    [SerializeField]
     public Conversation[] conversations;
+	public int[] groupSpots;
+	public int[] pnj; 
 	
 }

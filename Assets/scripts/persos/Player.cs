@@ -27,4 +27,7 @@ public partial class Player : MonoBehaviour {
 		FixedUpdateManu ();
 	}
 
+	void LateUpdate(){
+		LateUpdateLouis ();
+	}
 }
