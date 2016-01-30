@@ -20,20 +20,33 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void UpdateManu(){
-		if (Input.GetKeyDown ("down")) {
-			RitualObject rO = this.getGrabableObject ();
-			if (rO != null) {
-				Debug.Log ("Player can grab " + rO.objectName);
+		if (Input.GetAxis("DownAction") > 0.5f && ritualObject==null) {
+			this.ritualObject = this.getGrabableObject ();
+
+			if (this.ritualObject != null) {
+				Debug.Log ("Player can grab " + this.ritualObject.objectName);
+				this.ritualObject.gameObject.transform.SetParent (this.mTransform);
+
 			} else {
 				Debug.Log ("Player cannot grab anything");
 			}
 		}
+
+		if (Input.GetAxis("UpAction") > 0.5f && ritualObject!=null) {
+			Debug.Log ("Dropping "+this.ritualObject.objectName);
+			this.ritualObject.transform.SetParent (GameManager.singleton.propsDefaultContainer);
+			this.ritualObject = null;
+		}
+
+		if (Input.GetAxis("LeftAction") > 0.5f ) {
+			Debug.Log ("LeftAction");
+		}
+
+		if (Input.GetAxis("RightAction") > 0.5f ) {
+			Debug.Log ("RightAction");
+		}
 	}
 
-	/**
-	 * Returns null if no object is within grabRange
-	 * Returns the closest grabable object
-	 */
 	public RitualObject getGrabableObject() {
 		Transform t = SpriteManager.Instance.GetGrabableObject (this.mTransform.position, grabRange);
 		if (t != null) {
