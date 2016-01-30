@@ -16,8 +16,8 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void FixedUpdateLouis(){
-		Vector2 force = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
-		mRigidBody.AddForce(force);
+		Move ();
+		SetIndexSprites ();
 	}
 
 	void UpdateLouis(){
@@ -25,10 +25,14 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void Move(){
-
+		Vector2 force = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
+		mRigidBody.AddForce(force);
 	}
 
 	void SetIndexSprites(){
-
+		Vector2 scale = new Vector2 (mTransform.localScale.x, mTransform.localScale.y);
+		Vector2 pos = new Vector2 (mTransform.position.x, mTransform.position.y);
+		Rect myRect = new Rect (pos,scale);
+		SpriteManager.Instance.SetSpritesIndex (myRect);
 	}
 }
