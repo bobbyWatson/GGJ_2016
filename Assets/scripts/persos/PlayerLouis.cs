@@ -9,6 +9,7 @@ public partial class Player : MonoBehaviour {
 	private Camera cam;
 	private Rigidbody2D mRigidBody;
 	public int speed;
+	public bool camFollowActive = false;
 
 	void AwakeLouis(){
 		cam = Camera.main;
@@ -25,9 +26,11 @@ public partial class Player : MonoBehaviour {
 		SetIndexSprites ();
 	}
 
-	//void LateUpdateLouis(){
-	//	cam.transform.position = new Vector3 (mTransform.position.x, mTransform.position.y, cam.transform.position.z);
-	//}
+	void LateUpdateLouis(){
+		if (camFollowActive) {
+			cam.transform.position = new Vector3 (mTransform.position.x, mTransform.position.y, cam.transform.position.z);
+		}
+	}
 
 	void UpdateLouis(){
 
