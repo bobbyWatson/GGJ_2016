@@ -17,9 +17,9 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
-Assets/scenes/Elie.unity
+/Assets/scenes/Elie.*
 /Assets/scenes/Louis.*
-/Assets/scenes/Manu.unity
+/Assets/scenes/Manu.*
 Temp/
 Library/
 
