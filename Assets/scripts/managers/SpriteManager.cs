@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class SpriteManager : MonoBehaviour {
 
+
 	private static SpriteManager _instance;
 	public static SpriteManager Instance{
 		get{
@@ -59,5 +60,13 @@ public class SpriteManager : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public Transform GetGoodProp(Vector3 playerPos, float grapRadius, out bool found){
+
+		found = false;
+
+		return null;
+
 	}
 }
