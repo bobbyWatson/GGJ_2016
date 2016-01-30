@@ -2,12 +2,23 @@
 using System.Collections;
 
 public class RitualSpot : MonoBehaviour {
-	
-	void Start () {
+
+	private BoxCollider2D mBoxCollider2d;
+
+	void Awake() {
+		mBoxCollider2d = GetComponent<BoxCollider2D> ();
 	}
 
-	void FixedUpdate () {
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Player") {
+			Player player = other.gameObject.GetComponent<Player> ();
+			player.ritualSpot = this;
+			Debug.Log ("entered spot");
+		}
 	}
+
+
+
 
 
 }
