@@ -20,4 +20,12 @@ public partial class Player : MonoBehaviour {
 	void UpdateLouis(){
 
 	}
+
+	void Move(){
+
+	}
+
+	void SetIndexSprites(){
+
+	}
 }
