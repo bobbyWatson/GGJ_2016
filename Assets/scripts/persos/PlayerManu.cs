@@ -4,9 +4,12 @@ using System.Collections;
 public partial class Player : MonoBehaviour {
 
 	public RitualObject ritualObject; // current object in hands
-	public RitualObject grabableObject; // current object that we could grab
+	public Generator generatorInRange; // current closest generator of ritual objects
+	public ActionPlace actionPlace; // current closest action place
 
-	private static float grabRange = 30.0f;
+	private static float grabRange = 50.0f;
+	private static float useRange = 50.0f;
+
 
 	void AwakeManu (){
 
@@ -22,53 +25,49 @@ public partial class Player : MonoBehaviour {
 
 	void UpdateManu(){
 
-		// Update grabableObject
+		// Update generatorInRange
 		if (this.ritualObject == null) {
-			this.grabableObject = this.getGrabableObject ();
+			this.generatorInRange = this.getGeneratorInRange ();
 		} else {
-			this.grabableObject = null;
+			this.generatorInRange = null;
+		}
+
+		// Update actionPlace
+		if (this.ritualObject == null) {
+			this.actionPlace = null;
+		} else {
+			this.actionPlace = this.getActionPlaceInRange();
 		}
 
 		// Update UI
 		GameManager.singleton.temporaryUItext.text = this.GetPlayerActionsInfo();
-
 		if (Input.GetAxis("DownAction") > 0.5f) {
 
-			if (ritualObject != null) {
-				ritualObject.DownAction ();
-			} else if(this.grabableObject!=null) {
-			    // grab object closest object in range
-				this.ritualObject = this.grabableObject;
+			if (this.ritualObject==null && this.generatorInRange != null) {
+				// grab object from generator
+				GameObject obj = this.generatorInRange.Generate();
+				this.ritualObject = obj.GetComponent<RitualObject> ();
 				this.ritualObject.pickUpPosition = this.ritualObject.transform.position;
-				this.grabableObject = null;
-				this.ritualObject.gameObject.transform.SetParent (this.mTransform);
-			} else {
-				Debug.Log ("Player cannot grab anything");
+				obj.transform.SetParent (this.transform);
+			}
+
+			if (this.ritualObject != null && this.actionPlace != null) {
+				this.ritualObject.Action ();
 			}
 		}
 
-		if (Input.GetAxis("UpAction") > 0.5f && ritualObject!=null) {
-			ritualObject.UpAction ();
-		}
-
-		if (Input.GetAxis("LeftAction") > 0.5f && ritualObject!=null) {
-			ritualObject.LeftAction ();
-		}
-
-		if (Input.GetAxis("RightAction") > 0.5f && ritualObject!=null) {
-			ritualObject.RightAction ();
-		}
-
-
 	}
 
-	public RitualObject getGrabableObject() {
+	public Generator getGeneratorInRange() {
 		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
-		Transform t = SpriteManager.Instance.GetGrabableObject (handsPosition, grabRange);
-		if (t != null) {
-			return t.gameObject.GetComponent<RitualObject> ();
-		}
-		return null;
+		Generator gen = GameManager.singleton.GetGenerator (handsPosition, grabRange);
+		return gen; // may be null
+	}
+
+	public ActionPlace getActionPlaceInRange() {
+		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
+		ActionPlace ap = GameManager.singleton.GetActionPlace (handsPosition, useRange);
+		return ap; // may be null
 	}
 
 	public string GetPlayerActionsInfo() {
@@ -78,36 +77,15 @@ public partial class Player : MonoBehaviour {
 		s.Append(this.ritualObject==null ? "none" : this.ritualObject.objectName());
 		s.AppendLine ();
 
-		if (this.ritualObject != null) {
-			s.Append ("DownAction: ");
-			s.Append (this.ritualObject.DownActionInfo ());
-			s.AppendLine ();
-
-			s.Append ("UpAction: ");
-			s.Append (this.ritualObject.UpActionInfo ());
-			s.AppendLine ();
-
-			s.Append ("LeftAction: ");
-			s.Append (this.ritualObject.LeftActionInfo ());
-			s.AppendLine ();
-
-			s.Append ("RightAction: ");
-			s.Append (this.ritualObject.RightActionInfo ());
-			s.AppendLine ();
-		} else {
-			s.Append ("DownAction: ");
-			if (this.grabableObject != null) {
-				s.Append ("Grab " + this.grabableObject.name);
+		s.Append ("DownAction: ");
+		if (this.ritualObject == null) {
+			if (this.generatorInRange!=null) {
+				s.Append("Grab "+this.generatorInRange.gameObject.name);
 			}
-			s.AppendLine ();
-			s.Append ("UpAction: "); s.AppendLine ();
-			s.Append ("LeftAction: "); s.AppendLine ();
-			s.Append ("RightAction: "); s.AppendLine ();
+		} else if(this.actionPlace!=null) {
+			s.Append ("action place");
+			s.Append (this.ritualObject.ActionInfo ());
 		}
-
-		s.Append ("Score: ");
-
-		s.Append(this.ritualObject==null ? "" : ""+this.ritualObject.getObjectiveScore());
 		s.AppendLine ();
 
 		return s.ToString ();

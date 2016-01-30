@@ -3,10 +3,14 @@ using System.Collections;
 
 abstract public class RitualObject : MonoBehaviour {
 
-	public abstract string objectName();
 	public Vector3 pickUpPosition;
 
-	public abstract Vector3 getIdealPosition();
+	public abstract string objectName();
+	public abstract ActionPlace getBestPlace(); // the best place to "use" the object
+
+	public Vector3 getIdealPosition() {
+		return getBestPlace().gameObject.transform.position;
+	}
 
 	public float getObjectiveScore() {
 
@@ -16,18 +20,8 @@ abstract public class RitualObject : MonoBehaviour {
 		float s = (initDistToOpt - distToOpt) / initDistToOpt;
 		return UnityEngine.Mathf.Max (s, -1f);
 	}
-
-
-	public abstract void UpAction(); // action when player has object and presses UpAction (depends on position) 
-	public abstract string UpActionInfo(); // tells what the action will do, but does nothing
-
-	public abstract void DownAction();
-	public abstract string DownActionInfo();
-
-	public abstract void LeftAction();
-	public abstract string LeftActionInfo();
-
-	public abstract void RightAction();
-	public abstract string RightActionInfo();
+    
+	public abstract void Action(); // action when player has object and presses Action (depends on position) 
+	public abstract string ActionInfo(); // tells what the action will do, but does nothing
 
 }

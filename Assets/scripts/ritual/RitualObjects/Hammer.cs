@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Candle : RitualObject {
-
+public class Hammer : RitualObject {
 
 
 	public override string objectName() {
-		return "Candle";
+		return "Hammer";
 	}
 
 	public override ActionPlace getBestPlace() {
-		return GameManager.singleton.actionPlaces[0]; // fire place
+		return GameManager.singleton.actionPlaces[2]; // slave
 	}
 
 	public override void Action() {
@@ -22,7 +21,7 @@ public class Candle : RitualObject {
 
 	public override string ActionInfo() {
 		if (GameManager.singleton.player.actionPlace != null) {
-			return "Use Candle in " + GameManager.singleton.player.actionPlace.gameObject.name;
+			return "Use Hammer in " + GameManager.singleton.player.actionPlace.gameObject.name;
 
 		}
 		return "";
