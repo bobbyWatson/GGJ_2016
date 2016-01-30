@@ -26,7 +26,7 @@ public class SpriteManager : MonoBehaviour {
 		GetGoodSprites ();
 	}
 
-	void GetGoodSprites(){
+	public void GetGoodSprites(){
 		meubles = new List<Transform> ();
 		props = new List<Transform> ();
 		GameObject[] objects = GameObject.FindGameObjectsWithTag ("MEUBLE");
@@ -42,8 +42,9 @@ public class SpriteManager : MonoBehaviour {
 	public void SetSpritesIndex (Rect playerPos){
 		foreach (Transform t in meubles) {
 			if (t != null) {
+				Texture tx = t.GetComponent<SpriteRenderer> ().sprite.texture;
 				float index = 0;
-				if ((t.position + Vector3.down * t.localScale.y / 2).y < (playerPos.position + Vector2.down * playerPos.height /2).y) {
+				if ((t.position + Vector3.down * t.localScale.y / 2 * tx.height).y < (playerPos.position + Vector2.down * playerPos.height /2).y) {
 					t.position = new Vector3 (t.position.x, t.position.y, -1);
 				} else {
 					t.position = new Vector3 (t.position.x, t.position.y, 2);
