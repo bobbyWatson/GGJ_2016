@@ -10,7 +10,6 @@ public partial class Player : MonoBehaviour {
 	private static float grabRange = 50.0f;
 	private static float useRange = 50.0f;
 
-
 	void AwakeManu (){
 
 	}
@@ -49,13 +48,15 @@ public partial class Player : MonoBehaviour {
 				this.ritualObject = obj.GetComponent<RitualObject> ();
 				this.ritualObject.pickUpPosition = this.ritualObject.transform.position;
 				obj.transform.SetParent (this.transform);
+				GameManager.singleton.currentStep.ritualObject = this.ritualObject.objectName ();
 			}
 
 			if (this.ritualObject != null && this.actionPlace != null) {
 				this.ritualObject.Action ();
+				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name; 
+				GameManager.singleton.startStep ();
 			}
 		}
-
 	}
 
 	public Generator getGeneratorInRange() {

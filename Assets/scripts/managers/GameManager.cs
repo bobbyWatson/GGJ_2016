@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour {
 	public Transform propsDefaultContainer;
 	public Player player;
 
+	public List<Step> steps;
+	public Step currentStep;
+
 	public UnityEngine.UI.Text temporaryUItext;
 
 	void Awake () {
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		singleton = this;
+		singleton.steps = new List<Step> ();
 		DontDestroyOnLoad (singleton);
 		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
 		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
@@ -40,6 +44,10 @@ public class GameManager : MonoBehaviour {
 			singleton.actionPlaces.Add(ap);
 		}
 		Debug.Log ("Game Manager action places found:" + singleton.actionPlaces.Count);
+	}
+
+	void Start() {
+		this.startStep ();
 	}
 
 	public Generator GetGenerator(Vector3 playerPos, float grabRadius) {
@@ -79,6 +87,16 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+	}
+
+	public void startStep() {
+		if (currentStep != null) {
+			currentStep.endTime = Time.time;
+			steps.Add (currentStep);
+			Debug.Log ("Step ended:" + currentStep.ToString());
+		}
+		currentStep = new Step ();
+		currentStep.startTime = Time.time;
 	}
 
 }
