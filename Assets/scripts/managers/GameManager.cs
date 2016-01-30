@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour {
 		return closestGen;
 	}
 
-	public ActionPlace GetActionPlace(Vector3 playerPos, float grabRadius) {
+	public ActionPlace GetClosestActionPlace(Vector3 playerPos, float grabRadius) {
 		ActionPlace closestAP = null;
 		float minDistance = grabRadius;
 
@@ -107,6 +107,24 @@ public class GameManager : MonoBehaviour {
 		}
 		return closestAP;
 	}
+
+	public ActionPlace GetActionPlaceByName(string name){
+		if (name == "Statue") {
+			return this.actionPlaces [0];
+		}
+		if (name == "Slave") {
+			return this.actionPlaces [1];
+		}
+		if (name == "Poney") {
+			return this.actionPlaces [2];
+		}
+		if (name == "Stoup") {
+			return this.actionPlaces [3];
+		}
+		return null;
+	}
+
+
 
 	// Update is called once per frame
 	void Update () {
@@ -124,3 +142,5 @@ public class GameManager : MonoBehaviour {
 	}
 
 }
+
+public enum PlayerInput {Up, Down, Left, Right};

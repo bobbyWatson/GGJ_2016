@@ -3,7 +3,7 @@ using System.Collections;
 
 abstract public class RitualObject : MonoBehaviour {
 
-	public Vector3 pickUpPosition;
+	public Vector3 pickUpPosition; // position where the object was picked up
 
 	public abstract string objectName();
 	public abstract ActionPlace getBestPlace(); // the best place to "use" the object
@@ -21,7 +21,28 @@ abstract public class RitualObject : MonoBehaviour {
 		return UnityEngine.Mathf.Max (s, -1f);
 	}
     
-	public abstract void Action(); // action when player has object and presses Action (depends on position) 
-	public abstract string ActionInfo(); // tells what the action will do, but does nothing
+	public void Action(PlayerInput playerInput) { // action when player has object and presses Action (depends on position)
+		
+		Destroy(this.gameObject);
+		GameManager.singleton.player.ritualObject = null;
+		// TODO: effects and score in function
+	}
+
+	public string ActionInfo(PlayerInput playerInput) // tells what the action will do, but does nothing
+	{
+		if (GameManager.singleton.player.actionPlace != null) {
+
+			string actionPlace = GameManager.singleton.player.actionPlace.gameObject.name;
+			string ritualObject = this.objectName ();
+			string[] verbs = Triplets.getActionVerbs (ritualObject, actionPlace); 
+			int verbIdx = 0; // left
+			if(playerInput==PlayerInput.Up) verbIdx=1;
+			if(playerInput==PlayerInput.Right) verbIdx=2;
+
+			return ritualObject + " " + verbs[verbIdx] + " " + actionPlace;
+		}
+
+		return "";
+	}
 
 }

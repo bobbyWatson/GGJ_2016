@@ -51,12 +51,40 @@ public partial class Player : MonoBehaviour {
 				GameManager.singleton.currentStep.ritualObject = this.ritualObject.objectName ();
 			}
 
-			if (this.ritualObject != null && this.actionPlace != null) {
-				this.ritualObject.Action ();
+		}
+
+		if (ritualObject != null && this.actionPlace != null) {
+			bool pressedOther = false;
+			PlayerInput playerInput = PlayerInput.Down;
+
+			if (Input.GetAxis ("UpAction") > 0.5f) {
+				pressedOther = true;
+				playerInput = PlayerInput.Up;
+			}
+
+			if (Input.GetAxis ("LeftAction") > 0.5f) {
+				pressedOther = true;
+				playerInput = PlayerInput.Left;
+			}
+
+			if (Input.GetAxis ("RightAction") > 0.5f) {
+				pressedOther = true;
+				playerInput = PlayerInput.Right;
+			}
+
+			if(pressedOther) {
+				this.ritualObject.Action (playerInput);
+
+				// update current step info and start next step
 				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name; 
 				GameManager.singleton.startStep ();
 			}
 		}
+
+
+			
+
+
 	}
 
 	public Generator getGeneratorInRange() {
@@ -67,9 +95,10 @@ public partial class Player : MonoBehaviour {
 
 	public ActionPlace getActionPlaceInRange() {
 		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
-		ActionPlace ap = GameManager.singleton.GetActionPlace (handsPosition, useRange);
+		ActionPlace ap = GameManager.singleton.GetClosestActionPlace (handsPosition, useRange);
 		return ap; // may be null
 	}
+
 
 	public string GetPlayerActionsInfo() {
 		System.Text.StringBuilder s = new System.Text.StringBuilder ();
@@ -83,8 +112,24 @@ public partial class Player : MonoBehaviour {
 			if (this.generatorInRange!=null) {
 				s.Append("Grab "+this.generatorInRange.gameObject.name);
 			}
-		} else if(this.actionPlace!=null) {
-			s.Append (this.ritualObject.ActionInfo ());
+		}
+		s.AppendLine ();
+
+		s.Append("UpAction: ");
+		if(this.actionPlace!=null) {
+			s.Append (this.ritualObject.ActionInfo (PlayerInput.Up));
+		}
+		s.AppendLine ();
+
+		s.Append ("LeftAction: ");
+		if(this.actionPlace!=null) {
+			s.Append (this.ritualObject.ActionInfo (PlayerInput.Left));
+		}
+		s.AppendLine ();
+
+		s.Append ("RightAction: ");
+		if(this.actionPlace!=null) {
+			s.Append (this.ritualObject.ActionInfo (PlayerInput.Right));
 		}
 		s.AppendLine ();
 
@@ -97,4 +142,8 @@ public partial class Player : MonoBehaviour {
 
 		return s.ToString ();
 	}
+
+
+
 }
+
