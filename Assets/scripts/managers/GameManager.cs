@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager singleton;
 
-	List<RitualObject> ritualObjects;
-	List<RitualSpot> ritualSpots;
+	public List<RitualObject> ritualObjects;
+	public List<RitualSpot> ritualSpots;
 
 	void Awake () {
 		if (singleton != null) {
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
 
 }

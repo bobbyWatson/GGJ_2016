@@ -22,7 +22,7 @@ public partial class Player : MonoBehaviour {
 
 		if (Input.GetKeyDown ("down")) {
 
-			// look through all the objects
+
 
 		}
 			
