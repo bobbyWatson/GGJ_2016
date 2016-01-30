@@ -1,0 +1,19 @@
+Les PNJ sont regroupés en "groupes".
+Un groupe peut comprendre de 1 à plein de PNJ
+
+Les groupes ont une zone de detection du joueur pour lire leurs conversations
+et une zone de tween pour faire une transition alpha de ces conversations
+
+Les groupes ont [9] conversations en pool
+au début de la journée on en choisit [3] 
+A la fin de la journée on exclut une des conversations choisie
+
+Les journées ont [3] patternes de LD défénies
+les groupes se mettent sur les emplacement du pattern choisi au début de la journée
+
+Les conversations sont composées de répliques, ces répliques sont attribuées à un PNJ
+
+
+
+---------------------------------------------------------------
+
