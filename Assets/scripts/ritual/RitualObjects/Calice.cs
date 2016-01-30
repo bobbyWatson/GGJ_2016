@@ -3,9 +3,17 @@ using System.Collections;
 
 public class Calice : RitualObject {
 
+	public GameObject caliceSpot;
+	public bool containsLiquid = true;
+
 	public override string objectName() {
 		return "Calice";
 	}
+
+	public override Vector3 getIdealPosition() {
+		return caliceSpot.transform.position;
+	}
+
 	
 	public override void UpAction() {
 		// drop the calice
@@ -23,9 +31,16 @@ public class Calice : RitualObject {
 	}
 
 	public override void LeftAction() {
+		Debug.Log ("Drunk liquid from calice");
+		containsLiquid = false;
+		GetComponent<SpriteRenderer>().color = Color.cyan;
 	}
 	public override string LeftActionInfo() {
-		return "";
+		if (containsLiquid) {
+			return "Drink liquid in calice";
+		} else {
+			return "";
+		}
 	}
 
 	public override void RightAction() {

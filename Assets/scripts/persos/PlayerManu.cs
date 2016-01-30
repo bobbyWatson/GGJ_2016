@@ -39,6 +39,7 @@ public partial class Player : MonoBehaviour {
 			} else if(this.grabableObject!=null) {
 			    // grab object closest object in range
 				this.ritualObject = this.grabableObject;
+				this.ritualObject.pickUpPosition = this.ritualObject.transform.position;
 				this.grabableObject = null;
 				this.ritualObject.gameObject.transform.SetParent (this.mTransform);
 			} else {
@@ -103,6 +104,11 @@ public partial class Player : MonoBehaviour {
 			s.Append ("LeftAction: "); s.AppendLine ();
 			s.Append ("RightAction: "); s.AppendLine ();
 		}
+
+		s.Append ("Score: ");
+
+		s.Append(this.ritualObject==null ? "" : ""+this.ritualObject.getObjectiveScore());
+		s.AppendLine ();
 
 		return s.ToString ();
 	}
