@@ -28,6 +28,6 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void LateUpdate(){
-		LateUpdateLouis ();
+	//	LateUpdateLouis ();
 	}
 }

@@ -25,9 +25,9 @@ public partial class Player : MonoBehaviour {
 		SetIndexSprites ();
 	}
 
-	void LateUpdateLouis(){
-		cam.transform.position = new Vector3 (mTransform.position.x, mTransform.position.y, cam.transform.position.z);
-	}
+	//void LateUpdateLouis(){
+	//	cam.transform.position = new Vector3 (mTransform.position.x, mTransform.position.y, cam.transform.position.z);
+	//}
 
 	void UpdateLouis(){
 

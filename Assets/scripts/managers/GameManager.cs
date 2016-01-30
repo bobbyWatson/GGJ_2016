@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 	public List<RitualSpot> ritualSpots;
 	public Transform propsDefaultContainer;
 
+	public UnityEngine.UI.Text temporaryUItext;
+
 	void Awake () {
 		if (singleton != null) {
 			Debug.LogWarning ("Attempt to create a second GameManager. New one will be ignored.");
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour {
 		singleton = this;
 		DontDestroyOnLoad (singleton);
 		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
+
+		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
 	}
 
 	// Update is called once per frame

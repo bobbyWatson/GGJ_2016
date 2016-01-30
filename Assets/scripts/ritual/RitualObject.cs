@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RitualObject : MonoBehaviour {
+abstract public class RitualObject : MonoBehaviour {
 
-	public string objectName;
+	public abstract string objectName();
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
+	// this is what happens when player has object and presses action button
+	// will depend on position
+	public abstract void UpAction();
+	public abstract void DownAction();
+	public abstract void LeftAction();
+	public abstract void RightAction();
+
 
 
 
