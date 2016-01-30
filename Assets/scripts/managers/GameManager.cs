@@ -9,19 +9,23 @@ public class GameManager : MonoBehaviour {
 	public List<Step> optimalSteps;
 
 	public List<Step> GenerateOptimalsSteps(){
+		
 		List<Step> result = new List<Step> ();
-		List<string> ritualObjectNames = new List<string>();
-		ritualObjectNames.Add("Candle");
-		ritualObjectNames.Add("Hammer");
-		Random.seed = 17;
-		for (int i = 0; i < 8; i++) {
-			Step step = new Step ();
-			step.actionPlace = this.actionPlaces[Random.Range(0, this.actionPlaces.Count)].gameObject.name;
-			step.ritualObject = ritualObjectNames[Random.Range(0, ritualObjectNames.Count)];
-			result.Add (step);
-		}
+		result.Add (new Step ("Candle", "Statue", PlayerInput.Left)); // offrir
+		result.Add (new Step ("Knife", "Statue", PlayerInput.Up)); // decapiter
+		result.Add (new Step ("Hammer", "Stoup", PlayerInput.Right)); // frapper
+		result.Add (new Step ("Pineapple", "Stoup", PlayerInput.Left)); // benir
+		result.Add (new Step ("Knife", "Poney", PlayerInput.Up)); // licorne
+		result.Add (new Step ("Pineapple", "Poney", PlayerInput.Up)); // violer
+		result.Add (new Step ("Blood", "Stoup", PlayerInput.Up)); // melanger
+		result.Add (new Step ("Chain", "Stoup", PlayerInput.Up)); // rester perplexe
 
 		return result;
+	}
+
+	public Step currentOptimalStep() {
+		int numStep = steps.Count;
+		return optimalSteps [numStep];
 	}
 
 	public List<Generator> ritualObjectsGenerators;

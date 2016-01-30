@@ -76,7 +76,8 @@ public partial class Player : MonoBehaviour {
 				this.ritualObject.Action (playerInput);
 
 				// update current step info and start next step
-				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name; 
+				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name;
+				GameManager.singleton.currentStep.playerInput = playerInput;
 				GameManager.singleton.startStep ();
 			}
 		}
