@@ -5,7 +5,7 @@ public partial class Player : MonoBehaviour {
 
 	public RitualObject ritualObject; // current object in hands
 
-	private static float grabRange = 200.0f;
+	private static float grabRange = 100.0f;
 
 	void AwakeManu (){
 
@@ -33,7 +33,7 @@ public partial class Player : MonoBehaviour {
 		}
 
 		if (Input.GetAxis("UpAction") > 0.5f && ritualObject!=null) {
-			Debug.Log ("Dropping "+this.ritualObject.objectName);
+			Debug.Log ("UpAction: Dropping "+this.ritualObject.objectName);
 			this.ritualObject.transform.SetParent (GameManager.singleton.propsDefaultContainer);
 			this.ritualObject = null;
 		}
@@ -48,7 +48,8 @@ public partial class Player : MonoBehaviour {
 	}
 
 	public RitualObject getGrabableObject() {
-		Transform t = SpriteManager.Instance.GetGrabableObject (this.mTransform.position, grabRange);
+		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 50f, 0f);
+		Transform t = SpriteManager.Instance.GetGrabableObject (handsPosition, grabRange);
 		if (t != null) {
 			return t.gameObject.GetComponent<RitualObject> ();
 		}
