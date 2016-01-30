@@ -83,10 +83,16 @@ public partial class Player : MonoBehaviour {
 				s.Append("Grab "+this.generatorInRange.gameObject.name);
 			}
 		} else if(this.actionPlace!=null) {
-			s.Append ("action place");
 			s.Append (this.ritualObject.ActionInfo ());
 		}
 		s.AppendLine ();
+
+		s.Append ("Score: ");
+		if (this.ritualObject != null) {
+			s.Append(this.ritualObject.getObjectiveScore());
+		} 
+		s.AppendLine ();
+
 
 		return s.ToString ();
 	}
