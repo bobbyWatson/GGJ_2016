@@ -5,8 +5,10 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager singleton;
 
+
 	public List<RitualObject> ritualObjects;
 	public List<RitualSpot> ritualSpots;
+	public Transform propsDefaultContainer;
 
 	void Awake () {
 		if (singleton != null) {
@@ -17,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 		singleton = this;
 		DontDestroyOnLoad (singleton);
+		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
 	}
 
 	// Update is called once per frame

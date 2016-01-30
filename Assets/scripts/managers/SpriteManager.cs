@@ -63,11 +63,23 @@ public class SpriteManager : MonoBehaviour {
 		}
 	}
 
-	public Transform GetGoodProp(Vector3 playerPos, float grapRadius, out bool found){
+	/**
+	 * Returns the closest object that can be grabbed by the player (if any)
+	 * Returns null otherwise
+	 * */
+	public Transform GetGrabableObject(Vector3 playerPos, float grabRadius) {
+		Transform closestGrabable = null;
+		float minDistance = grabRadius;
 
-		found = false;
-
-		return null;
-
+		foreach (Transform t in props) {
+			if (t != null) {
+				float distance = Vector3.Distance (t.position, playerPos);
+				if (distance <= minDistance) {
+					closestGrabable = t;
+					minDistance = distance;
+				}
+			}
+		}
+		return closestGrabable;
 	}
 }

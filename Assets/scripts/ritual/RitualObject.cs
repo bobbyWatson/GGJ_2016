@@ -3,8 +3,7 @@ using System.Collections;
 
 public class RitualObject : MonoBehaviour {
 
-	string objectName;
-
+	public string objectName;
 
 	void Start () {
 	
