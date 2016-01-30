@@ -26,6 +26,10 @@ public class SpriteManager : MonoBehaviour {
 		GetGoodSprites ();
 	}
 
+	public void AddProp(Transform prop){
+		props.Add (prop);
+	}
+
 	public void GetGoodSprites(){
 		meubles = new List<Transform> ();
 		props = new List<Transform> ();

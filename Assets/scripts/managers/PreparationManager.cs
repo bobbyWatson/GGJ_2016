@@ -13,6 +13,8 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
+	public Sprite bulleSprite;
+	public GameObject pnjPrefab;
 	public Group[] groups;
 	public GroupeParam[] groupParams;
 	public Transform spotRoot;
