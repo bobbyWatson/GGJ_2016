@@ -6,7 +6,7 @@ public partial class Player : MonoBehaviour {
 	public RitualObject ritualObject; // current object in hands
 	public RitualObject grabableObject; // current object that we could grab
 
-	private static float grabRange = 100.0f;
+	private static float grabRange = 30.0f;
 
 	void AwakeManu (){
 
@@ -32,8 +32,12 @@ public partial class Player : MonoBehaviour {
 		// Update UI
 		GameManager.singleton.temporaryUItext.text = this.GetPlayerActionsInfo();
 
-		if (Input.GetAxis("DownAction") > 0.5f && this.grabableObject!=null) {
-			if (this.grabableObject != null) {
+		if (Input.GetAxis("DownAction") > 0.5f) {
+
+			if (ritualObject != null) {
+				ritualObject.DownAction ();
+			} else if(this.grabableObject!=null) {
+			    // grab object closest object in range
 				this.ritualObject = this.grabableObject;
 				this.grabableObject = null;
 				this.ritualObject.gameObject.transform.SetParent (this.mTransform);
@@ -43,9 +47,7 @@ public partial class Player : MonoBehaviour {
 		}
 
 		if (Input.GetAxis("UpAction") > 0.5f && ritualObject!=null) {
-			Debug.Log ("UpAction: Dropping "+this.ritualObject.objectName());
-			this.ritualObject.transform.SetParent (GameManager.singleton.propsDefaultContainer);
-			this.ritualObject = null;
+			ritualObject.UpAction ();
 		}
 
 		if (Input.GetAxis("LeftAction") > 0.5f && ritualObject!=null) {
@@ -60,7 +62,7 @@ public partial class Player : MonoBehaviour {
 	}
 
 	public RitualObject getGrabableObject() {
-		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 50f, 0f);
+		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
 		Transform t = SpriteManager.Instance.GetGrabableObject (handsPosition, grabRange);
 		if (t != null) {
 			return t.gameObject.GetComponent<RitualObject> ();
@@ -75,22 +77,32 @@ public partial class Player : MonoBehaviour {
 		s.Append(this.ritualObject==null ? "none" : this.ritualObject.objectName());
 		s.AppendLine ();
 
-		s.Append ("DownAction: ");
-		if (this.grabableObject != null) {
-			s.Append ("Grab "+this.grabableObject.name);
-		}
-		s.AppendLine ();
-
-		s.Append ("UpAction: ");
 		if (this.ritualObject != null) {
-			s.Append ("Drop "+this.ritualObject.name);
-		}
-		s.AppendLine ();
+			s.Append ("DownAction: ");
+			s.Append (this.ritualObject.DownActionInfo ());
+			s.AppendLine ();
 
-		s.Append ("LeftAction:");
-		s.AppendLine ();
-		s.Append ("RightAction:");
-		s.AppendLine ();
+			s.Append ("UpAction: ");
+			s.Append (this.ritualObject.UpActionInfo ());
+			s.AppendLine ();
+
+			s.Append ("LeftAction: ");
+			s.Append (this.ritualObject.LeftActionInfo ());
+			s.AppendLine ();
+
+			s.Append ("RightAction: ");
+			s.Append (this.ritualObject.RightActionInfo ());
+			s.AppendLine ();
+		} else {
+			s.Append ("DownAction: ");
+			if (this.grabableObject != null) {
+				s.Append ("Grab " + this.grabableObject.name);
+			}
+			s.AppendLine ();
+			s.Append ("UpAction: "); s.AppendLine ();
+			s.Append ("LeftAction: "); s.AppendLine ();
+			s.Append ("RightAction: "); s.AppendLine ();
+		}
 
 		return s.ToString ();
 	}

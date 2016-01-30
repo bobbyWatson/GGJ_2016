@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public List<RitualObject> ritualObjects;
 	public List<RitualSpot> ritualSpots;
 	public Transform propsDefaultContainer;
+	public Player player;
 
 	public UnityEngine.UI.Text temporaryUItext;
 
@@ -22,8 +23,8 @@ public class GameManager : MonoBehaviour {
 		singleton = this;
 		DontDestroyOnLoad (singleton);
 		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
-
 		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
+		singleton.player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
 	}
 
 	// Update is called once per frame

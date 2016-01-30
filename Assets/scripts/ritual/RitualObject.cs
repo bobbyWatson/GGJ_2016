@@ -5,15 +5,16 @@ abstract public class RitualObject : MonoBehaviour {
 
 	public abstract string objectName();
 
-	// this is what happens when player has object and presses action button
-	// will depend on position
-	public abstract void UpAction();
+	public abstract void UpAction(); // action when player has object and presses UpAction (depends on position) 
+	public abstract string UpActionInfo(); // tells what the action will do, but does nothing
+
 	public abstract void DownAction();
+	public abstract string DownActionInfo();
+
 	public abstract void LeftAction();
+	public abstract string LeftActionInfo();
+
 	public abstract void RightAction();
-
-
-
-
+	public abstract string RightActionInfo();
 
 }
