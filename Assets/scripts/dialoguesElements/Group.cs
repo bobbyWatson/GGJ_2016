@@ -6,8 +6,8 @@ using UnityEditor;
 public class Group : MonoBehaviour {
 
 	public const int CONVERSATION_NB = 3;
-	public const float FULL_DIALOGUE_RADIUS = 100;
-	public const float TWEEN_DIALOGUE_RADIUS = 200;
+	public const float FULL_DIALOGUE_RADIUS = 200;
+	public const float TWEEN_DIALOGUE_RADIUS = 400;
 	public Pnj[] pnjs;
 
 	private Transform player;
@@ -38,6 +38,18 @@ public class Group : MonoBehaviour {
 			pnjs [i] = pnj;
 			pnj.transform.SetParent (transform, true);
 			pnj.transform.position = chosenSpot.CharactersSpots [i].position;
+			Vector3 dir = transform.position - pnj.transform.position;
+			if (dir.x > 0) {
+				if (dir.y > 0)
+					pnj.GetComponent<SpriteRenderer> ().sprite = PreparationManager.Instance.rightTopPnj;
+				else
+					pnj.GetComponent<SpriteRenderer> ().sprite = PreparationManager.Instance.rightBotPnj;
+			} else {
+				if (dir.y > 0)
+					pnj.GetComponent<SpriteRenderer> ().sprite = PreparationManager.Instance.leftTopPnj;
+				else
+					pnj.GetComponent<SpriteRenderer> ().sprite = PreparationManager.Instance.leftBotPnj;
+			}
 
 		}
 		SpriteManager.Instance.GetGoodSprites ();
@@ -89,10 +101,5 @@ public class Group : MonoBehaviour {
 	public void ConversationFinished(){
 		ChooseCoversation ();
 		currentConversation.Play ();
-	}
-
-	public void OnDrawGizmos(){
-		Gizmos.color = Color.green;
-		Gizmos.DrawSphere (transform.position, TWEEN_DIALOGUE_RADIUS);
 	}
 }

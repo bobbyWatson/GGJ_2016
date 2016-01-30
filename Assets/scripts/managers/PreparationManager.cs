@@ -13,6 +13,11 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
+	public Sprite leftBotPnj;
+	public Sprite leftTopPnj;
+	public Sprite rightTopPnj;
+	public Sprite rightBotPnj;
+	public GameObject PhrasePrefab;
 	public Sprite bulleSprite;
 	public GameObject pnjPrefab;
 	public Group[] groups;

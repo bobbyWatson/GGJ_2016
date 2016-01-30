@@ -39,7 +39,8 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void SetIndexSprites(){
-		Vector2 scale = new Vector2 (mTransform.localScale.x * spriteRenderer.sprite.texture.width, mTransform.localScale.y * spriteRenderer.sprite.texture.height);
+		Debug.Log (spriteRenderer.sprite.bounds.size.x);// .texture.width);
+		Vector2 scale = new Vector2 (mTransform.localScale.x * spriteRenderer.sprite.bounds.size.x, mTransform.localScale.y * spriteRenderer.sprite.bounds.size.y);
 		Vector2 pos = new Vector2 (mTransform.position.x, mTransform.position.y);
 		Rect myRect = new Rect (pos,scale);
 		SpriteManager.Instance.SetSpritesIndex (myRect);
