@@ -7,8 +7,13 @@ public class SpriteManager : MonoBehaviour {
 	private static SpriteManager _instance;
 	public static SpriteManager Instance{
 		get{
-			if (_instance == null)
+			if (_instance == null) {
 				_instance = FindObjectOfType<SpriteManager> ();
+				if (_instance == null) {
+					GameObject o = new GameObject ("spriteManager");
+					_instance = o.AddComponent<SpriteManager> ();
+				}
+			}
 			return _instance;
 		}
 	}
@@ -16,7 +21,7 @@ public class SpriteManager : MonoBehaviour {
 	private List<Transform> meubles;
 	private List<Transform> props;
 
-	void Start(){
+	void Awake(){
 		GetGoodSprites ();
 	}
 
