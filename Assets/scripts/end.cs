@@ -20,26 +20,34 @@ public class end : MonoBehaviour {
 			Debug.Log ("best score set to 0");
 		}
 		if (!PlayerPrefs.HasKey("nb_run")) {
-			PlayerPrefs.SetInt ("nb_run", 0);
-			Debug.Log ("run set to 0");
+			PlayerPrefs.SetInt ("nb_run", 1);
+			Debug.Log ("run set to 1");
 		}
 		if (!PlayerPrefs.HasKey("state")) {
 			PlayerPrefs.SetString("state", "neutral");
 			Debug.Log ("state set to victory");
 		}
 		//DEBUG ONLY
-		PlayerPrefs.SetString("state", "defeat");
+		PlayerPrefs.SetString("state", "victory");
 
 		state = PlayerPrefs.GetString ("state");
+		previous_run = PlayerPrefs.GetInt ("nb_run");
 		//StartCoroutine(SleepSecs(3));
 		if (state == "victory") {
 			i = 0;
-			best_score = PlayerPrefs.GetInt ("best_score");
-			Debug.Log("Best score : " + best_score);
-			if (PlayerPrefs.GetInt ("run") < best_score) {
-				PlayerPrefs.SetInt("best_score", best_score);
-				Debug.Log ("new best score");
+			if (PlayerPrefs.HasKey ("best_score")) {
+				best_score = PlayerPrefs.GetInt ("best_score");
+				Debug.Log (PlayerPrefs.GetInt ("nb_run"));
+				Debug.Log ("best score for now "+best_score);
+				if ((PlayerPrefs.GetInt ("nb_run") < best_score) && (best_score != 0)) {
+					PlayerPrefs.SetInt("best_score", previous_run);
+					Debug.Log ("new best score " + PlayerPrefs.GetInt ("nb_run"));
+				}
+			} else {
+				PlayerPrefs.SetInt("best_score", previous_run);
+				Debug.Log ("first best score");
 			}
+
 			PlayerPrefs.SetInt("nb_run", 0);
 			Debug.Log ("nb_run reset");
 			//need to launch a new game !
@@ -48,7 +56,7 @@ public class end : MonoBehaviour {
 			//relaunch the same game without incrementing
 		} else {
 			i = 2;
-			previous_run = PlayerPrefs.GetInt ("nb_run");
+
 			PlayerPrefs.SetInt ("nb_run", previous_run++);
 			Debug.Log ("Run incremented");
 			//relaunch the game and increment

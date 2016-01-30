@@ -20,7 +20,7 @@ public class menu : MonoBehaviour {
 			Debug.Log ("best score set to 0");
 			Best_score_display.text = "No best score yet";
 		} else {
-			Best_score_display.text = "Best score :" + PlayerPrefs.GetInt ("best_score");
+			Best_score_display.text = "Best score : " + PlayerPrefs.GetInt ("best_score");
 		}
 
 		if (!PlayerPrefs.HasKey("run")) {
