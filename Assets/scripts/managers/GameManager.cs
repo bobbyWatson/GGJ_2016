@@ -5,6 +5,24 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager singleton;
 
+	//the perfect!
+	public List<Step> optimalSteps;
+
+	public List<Step> GenerateOptimalsSteps(){
+		List<Step> result = new List<Step> ();
+		List<string> ritualObjectNames = new List<string>();
+		ritualObjectNames.Add("Candle");
+		ritualObjectNames.Add("Hammer");
+		Random.seed = 17;
+		for (int i = 0; i < 8; i++) {
+			Step step = new Step ();
+			step.actionPlace = this.actionPlaces[Random.Range(0, this.actionPlaces.Count)].gameObject.name;
+			step.ritualObject = ritualObjectNames[Random.Range(0, ritualObjectNames.Count)];
+			result.Add (step);
+		}
+
+		return result;
+	}
 
 	public List<Generator> ritualObjectsGenerators;
 	public List<ActionPlace> actionPlaces;
@@ -48,6 +66,12 @@ public class GameManager : MonoBehaviour {
 
 	void Start() {
 		this.startStep ();
+
+		this.optimalSteps = this.GenerateOptimalsSteps ();
+		foreach (Step step in optimalSteps) {
+			Debug.Log (step.ToString());
+		}
+
 	}
 
 	public Generator GetGenerator(Vector3 playerPos, float grabRadius) {
