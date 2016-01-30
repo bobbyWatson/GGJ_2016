@@ -22,7 +22,7 @@ public class SpriteManager : MonoBehaviour {
 	void GetGoodSprites(){
 		sprites = new List<Transform> ();
 		GameObject[] objects = GameObject.FindGameObjectsWithTag ("ChangeIndexSprite");
-		foreach (GameObject o in Object) {
+		foreach (GameObject o in objects) {
 			sprites.Add (o.transform);
 		}
 	}
