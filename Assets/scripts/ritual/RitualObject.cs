@@ -24,8 +24,11 @@ abstract public class RitualObject : MonoBehaviour {
 	public void Action(PlayerInput playerInput) { // action when player has object and presses Action (depends on position)
 		
 		Destroy(this.gameObject);
-		GameManager.singleton.player.ritualObject = null;
-		// TODO: effects and score in function
+		Player player = GameManager.singleton.player;
+		player.ritualObject = null;
+
+		StartCoroutine(player.animateAction(player.actionPlace, playerInput));
+
 	}
 
 	public string ActionInfo(PlayerInput playerInput) // tells what the action will do, but does nothing
@@ -35,11 +38,13 @@ abstract public class RitualObject : MonoBehaviour {
 			string actionPlace = GameManager.singleton.player.actionPlace.gameObject.name;
 			string ritualObject = this.objectName ();
 			string[] verbs = Triplets.getActionVerbs (ritualObject, actionPlace); 
+
 			int verbIdx = 0; // left
 			if(playerInput==PlayerInput.Up) verbIdx=1;
 			if(playerInput==PlayerInput.Right) verbIdx=2;
 
-			return ritualObject + " " + verbs[verbIdx] + " " + actionPlace;
+		//#return ritualObject + " " + verbs[verbIdx] + " " + actionPlace;
+			return verbs[verbIdx];
 		}
 
 		return "";

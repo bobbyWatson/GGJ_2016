@@ -39,7 +39,11 @@ Bon lieu, Mauvais objet : 0      (Total, 0 points)
 Mauvais lieu, mauvais objet, : -­6 (Total : ­6 points)
 
 Toutes  les 4 secondes inactives : ­ 5*/
-	
+
+	public static int scoreObject(Step actual, Step opt) {
+		return actual==opt ? 2 : 0;
+	}
+
 	public static int score(Step actual, Step opt) {
 		
 		bool place = actual.actionPlace == opt.ritualObject;

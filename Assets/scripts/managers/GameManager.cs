@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
+	
+	public ActionName[] actionNames;
 
 	public static GameManager singleton;
+
+	public ScoreManager scoreManager;
 
 	//the perfect!
 	public List<Step> optimalSteps;
@@ -29,6 +34,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public int PlayerScore() {
+		/*
 		int score = 0;
 		for (int i = 0; i < steps.Count; i++) {
 			score += Step.score (steps [i], optimalSteps [i]);
@@ -38,6 +44,8 @@ public class GameManager : MonoBehaviour {
 		    score += Step.currentStepScore(currentStep, optimalSteps[steps.Count]);
 		}
 		return score;
+		*/
+		return scoreManager.score;
 	}
 
 	public List<Generator> ritualObjectsGenerators;
@@ -83,9 +91,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start() {
-		this.startStep ();
-
 		this.optimalSteps = this.GenerateOptimalsSteps ();
+		this.startNewStep ();
+
 		//foreach (Step step in optimalSteps) {
 		//	Debug.Log (step.ToString());
 		//}
@@ -149,12 +157,19 @@ public class GameManager : MonoBehaviour {
 
 	}
 
-	public void startStep() {
+	public void startNewStep() {
 		if (currentStep != null) {
 			currentStep.endTime = Time.time;
 			steps.Add (currentStep);
 			Debug.Log ("Step ended:" + currentStep.ToString());
 		}
+
+		// check if end of game:
+		if (steps.Count == optimalSteps.Count) {
+			SceneManager.LoadScene ("End");
+		}
+
+		// game not ended
 		currentStep = new Step ();
 		currentStep.startTime = Time.time;
 	}
