@@ -18,6 +18,9 @@ public partial class Player : MonoBehaviour {
 	}
 
 	public IEnumerator animateAction(ActionPlace place, PlayerInput input) {
+
+		this.setCantMoveForSeconds (1.5f);
+
 		mCollider.enabled = false;
 		Vector3 playerPos = this.mTransform.position;
 		mTransform.position = place.gameObject.transform.position;

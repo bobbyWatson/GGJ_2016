@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour {
 		
 		List<Step> result = new List<Step> ();
 		result.Add (new Step ("Candle", "Statue", PlayerInput.Left)); // offrir
+		result.Add (new Step ("Knife", "Statue", PlayerInput.Up)); // decapiter
 
 		/*
-		result.Add (new Step ("Knife", "Statue", PlayerInput.Up)); // decapiter
 		result.Add (new Step ("Hammer", "Stoup", PlayerInput.Right)); // frapper
 		result.Add (new Step ("Pineapple", "Stoup", PlayerInput.Left)); // benir
 		result.Add (new Step ("Knife", "Poney", PlayerInput.Up)); // licorne
