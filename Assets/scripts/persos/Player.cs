@@ -5,6 +5,8 @@ public partial class Player : MonoBehaviour {
 
 
 	Transform mTransform;
+	public bool camFollowActive = false;
+	public bool inSecondPhase = false;
 
 	void Awake(){
 		mTransform = GetComponent<Transform> ();

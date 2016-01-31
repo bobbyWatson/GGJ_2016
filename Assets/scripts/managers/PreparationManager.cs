@@ -61,7 +61,7 @@ public class PreparationManager : MonoBehaviour {
 			yield return null;
 			timer += Time.deltaTime;
 		}
-		SceneManager.LoadScene ("Main");
+		SceneManager.LoadScene ("Game");
 	}
 
 	public void Init(){

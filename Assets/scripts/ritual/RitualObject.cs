@@ -1,19 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RitualObject : MonoBehaviour {
+abstract public class RitualObject : MonoBehaviour {
 
-	public string objectName;
+	public Vector3 pickUpPosition; // position where the object was picked up
 
-	void Start () {
-	
+	public abstract string objectName();
+	public abstract ActionPlace getBestPlace(); // the best place to "use" the object
+
+	public Vector3 getIdealPosition() {
+		return getBestPlace().gameObject.transform.position;
 	}
-	
-	void Update () {
-	
+
+	public float getObjectiveScore() {
+
+		float distToOpt = Vector3.Distance (getIdealPosition(), this.transform.position);
+		float initDistToOpt = Vector3.Distance(this.pickUpPosition, getIdealPosition());
+
+		float s = (initDistToOpt - distToOpt) / initDistToOpt;
+		return UnityEngine.Mathf.Max (s, -1f);
+	}
+    
+	public void Action(PlayerInput playerInput) { // action when player has object and presses Action (depends on position)
+		
+		Destroy(this.gameObject);
+		GameManager.singleton.player.ritualObject = null;
+		// TODO: effects and score in function
 	}
 
+	public string ActionInfo(PlayerInput playerInput) // tells what the action will do, but does nothing
+	{
+		if (GameManager.singleton.player.actionPlace != null) {
 
+			string actionPlace = GameManager.singleton.player.actionPlace.gameObject.name;
+			string ritualObject = this.objectName ();
+			string[] verbs = Triplets.getActionVerbs (ritualObject, actionPlace); 
+			int verbIdx = 0; // left
+			if(playerInput==PlayerInput.Up) verbIdx=1;
+			if(playerInput==PlayerInput.Right) verbIdx=2;
 
+			return ritualObject + " " + verbs[verbIdx] + " " + actionPlace;
+		}
+
+		return "";
+	}
 
 }

@@ -28,9 +28,11 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void LateUpdateLouis(){
-		cam.transform.position = new Vector3 (Mathf.Clamp(mTransform.position.x,-1713, 1673),
-			Mathf.Clamp(mTransform.position.y, -704, 712),
-			cam.transform.position.z);
+		if (camFollowActive) {
+			cam.transform.position = new Vector3 (Mathf.Clamp(mTransform.position.x,-1713, 1673),
+				Mathf.Clamp(mTransform.position.y, -704, 712),
+				cam.transform.position.z);
+		}
 	}
 
 	void UpdateLouis(){

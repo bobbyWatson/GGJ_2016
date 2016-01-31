@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d2d88e8993a5462478fc02cf0fccb373
-timeCreated: 1454186665
+timeCreated: 1454204085
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,11 +8,16 @@ TextureImporter:
     21300002: Cultistes_1
     21300004: Cultistes_2
     21300006: Cultistes_3
-    21300008: Cultistes_4
+    21300008: Cultistes_5_1
     21300010: Cultistes_5
     21300012: Cultistes_6
-    21300014: Cultistes_7
+    21300014: Cultistes_8_1
     21300016: Cultistes_8
+    21300018: Cultistes_6_2
+    21300020: Cultistes_5
+    21300022: Cultistes_5_2
+    21300024: Cultistes_7_2
+    21300026: Cultistes_8_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -67,7 +72,7 @@ TextureImporter:
         width: 86
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -41, y: 127}
@@ -84,7 +89,7 @@ TextureImporter:
         width: 86
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -11, y: 127}
@@ -102,7 +107,7 @@ TextureImporter:
         width: 107
         height: 271
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 17.5, y: 135.5}
@@ -123,7 +128,7 @@ TextureImporter:
         width: 107
         height: 271
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -17.5, y: 135.5}
@@ -136,7 +141,7 @@ TextureImporter:
         - {x: 53.5, y: -88.5}
         - {x: 53.5, y: 67.5}
         - {x: 32.5, y: 135.5}
-    - name: Cultistes_4
+    - name: Cultistes_5_1
       rect:
         serializedVersion: 2
         x: 615
@@ -144,7 +149,7 @@ TextureImporter:
         width: 169
         height: 314
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -64.5, y: 157}
@@ -158,46 +163,25 @@ TextureImporter:
         - {x: 84.5, y: -134}
         - {x: 84.5, y: 155}
         - {x: 76.5, y: 157}
-    - name: Cultistes_5
-      rect:
-        serializedVersion: 2
-        x: 814
-        y: 97
-        width: 132
-        height: 267
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -45, y: 133.5}
-        - {x: -64, y: 125.5}
-        - {x: -66, y: 122.5}
-        - {x: -66, y: -82.5}
-        - {x: -53, y: -133.5}
-        - {x: 66, y: -133.5}
-        - {x: 66, y: 126.5}
-        - {x: 44, y: 133.5}
     - name: Cultistes_6
       rect:
         serializedVersion: 2
         x: 1000
         y: 100
-        width: 103
+        width: 114
         height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -51.5, y: -129.5}
-        - {x: -39.5, y: -134.5}
-        - {x: -34.5, y: -137.5}
-        - {x: 51.5, y: -137.5}
-        - {x: 51.5, y: 11.5}
-        - {x: 45.5, y: 110.5}
-        - {x: 14.5, y: 137.5}
-        - {x: -34.5, y: 137.5}
-        - {x: -51.5, y: 102.5}
-    - name: Cultistes_7
+      - - {x: -33, y: 137.5}
+        - {x: -57, y: 98.5}
+        - {x: -57, y: -129.5}
+        - {x: -50, y: -137.5}
+        - {x: 48, y: -137.5}
+        - {x: 48, y: -23.5}
+        - {x: 23, y: 137.5}
+    - name: Cultistes_8_1
       rect:
         serializedVersion: 2
         x: 1182
@@ -205,7 +189,7 @@ TextureImporter:
         width: 125
         height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -62.5, y: 133}
@@ -222,7 +206,112 @@ TextureImporter:
         width: 127
         height: 323
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 161.5}
+        - {x: -50.5, y: 129.5}
+        - {x: -63.5, y: 60.5}
+        - {x: -63.5, y: -85.5}
+        - {x: -58.5, y: -134.5}
+        - {x: -40.5, y: -161.5}
+        - {x: 45.5, y: -161.5}
+        - {x: 63.5, y: -158.5}
+        - {x: 63.5, y: 161.5}
+      - - {x: -33.5, y: 128.5}
+        - {x: -40.5, y: 129.5}
+        - {x: -46.5, y: 129.5}
+        - {x: -53.5, y: 122.5}
+        - {x: -53.5, y: 108.5}
+        - {x: -52.5, y: 106.5}
+        - {x: -47.5, y: 105.5}
+        - {x: -34.5, y: 105.5}
+        - {x: -28.5, y: 115.5}
+        - {x: -28.5, y: 122.5}
+    - name: Cultistes_6_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 100
+        width: 103
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: -129.5}
+        - {x: -39.5, y: -134.5}
+        - {x: -34.5, y: -137.5}
+        - {x: 51.5, y: -137.5}
+        - {x: 51.5, y: 11.5}
+        - {x: 45.5, y: 110.5}
+        - {x: 14.5, y: 137.5}
+        - {x: -34.5, y: 137.5}
+        - {x: -51.5, y: 102.5}
+    - name: Cultistes_5
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 97
+        width: 132
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 133.5}
+        - {x: -66, y: 128.5}
+        - {x: -66, y: -93.5}
+        - {x: -58, y: -133.5}
+        - {x: 63, y: -133.5}
+        - {x: 66, y: -132.5}
+        - {x: 66, y: 113.5}
+        - {x: 48, y: 133.5}
+    - name: Cultistes_5_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 97
+        width: 132
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 133.5}
+        - {x: -66, y: 128.5}
+        - {x: -66, y: -93.5}
+        - {x: -58, y: -133.5}
+        - {x: 63, y: -133.5}
+        - {x: 66, y: -132.5}
+        - {x: 66, y: 113.5}
+        - {x: 48, y: 133.5}
+    - name: Cultistes_7_2
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 101
+        width: 125
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62.5, y: 133}
+        - {x: -62.5, y: -74}
+        - {x: -47.5, y: -128}
+        - {x: -45.5, y: -133}
+        - {x: 62.5, y: -133}
+        - {x: 62.5, y: 133}
+    - name: Cultistes_8_2
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 86
+        width: 127
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -13.5, y: 161.5}
