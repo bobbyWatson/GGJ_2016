@@ -13,7 +13,9 @@ public class intro : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(SleepSecs(3));
+		//StartCoroutine(SleepSecs(3));
+
+		/*
 		current_scene = (GameObject) Instantiate(cinematique_bloc[i], new Vector3(0, 1, 20), Quaternion.identity);
 		Nb_run_display = GameObject.Find("nb_run").GetComponent<Text>();
 		Debug.Log (PlayerPrefs.GetInt ("nb_run"));
@@ -26,6 +28,7 @@ public class intro : MonoBehaviour {
 			PlayerPrefs.SetInt ("nb_run", PlayerPrefs.GetInt ("nb_run") + 1);
 			Nb_run_display.text = "Run no " + PlayerPrefs.GetInt ("nb_run");
 		}
+		*/
 	}
 
 	// Update is called once per frame
