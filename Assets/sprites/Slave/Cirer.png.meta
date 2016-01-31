@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 585efca48e4aaae498ff58eb64c04632
+timeCreated: 1454244960
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cirer_0
+    21300002: Cirer_1
+    21300004: Cirer_2
+    21300006: Cirer_3
+    21300008: Cirer_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cirer_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 9
+        width: 186
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79, y: 117}
+        - {x: -84, y: 115}
+        - {x: -93, y: 90}
+        - {x: -93, y: -111}
+        - {x: -84, y: -117}
+        - {x: 89, y: -117}
+        - {x: 93, y: -19}
+        - {x: 93, y: 100}
+        - {x: 74, y: 117}
+    - name: Cirer_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 6
+        width: 187
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89.5, y: 117}
+        - {x: -93.5, y: 112}
+        - {x: -93.5, y: -117}
+        - {x: 55.5, y: -117}
+        - {x: 76.5, y: -115}
+        - {x: 93.5, y: 46}
+        - {x: 93.5, y: 105}
+        - {x: 73.5, y: 117}
+      - - {x: 4.5, y: 117}
+        - {x: 4.5, y: 83}
+        - {x: 7.5, y: 79}
+        - {x: 18.5, y: 79}
+        - {x: 22.5, y: 81}
+        - {x: 22.5, y: 108}
+        - {x: 19.5, y: 117}
+    - name: Cirer_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 204
+        width: 14
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cirer_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 6
+        width: 187
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93.5, y: 116.5}
+        - {x: -83.5, y: 116.5}
+        - {x: -93.5, y: 98.5}
+        - {x: -93.5, y: -111.5}
+        - {x: -44.5, y: -115.5}
+        - {x: -30.5, y: -94.5}
+        - {x: 9.5, y: -116.5}
+        - {x: 37.5, y: -116.5}
+        - {x: 69.5, y: -106.5}
+        - {x: 68.5, y: -96.5}
+        - {x: 68.5, y: -92.5}
+        - {x: 93.5, y: 2.5}
+      - - {x: -58.5, y: -113.5}
+        - {x: -55.5, y: -112.5}
+        - {x: -55.5, y: -109.5}
+        - {x: -58.5, y: -108.5}
+        - {x: -60.5, y: -110.5}
+      - - {x: 6.5, y: -97.5}
+        - {x: 9.5, y: -96.5}
+        - {x: 9.5, y: -93.5}
+        - {x: 6.5, y: -92.5}
+        - {x: 4.5, y: -94.5}
+      - - {x: -11.5, y: -65.5}
+        - {x: -8.5, y: -64.5}
+        - {x: -8.5, y: -61.5}
+        - {x: -11.5, y: -60.5}
+        - {x: -13.5, y: -62.5}
+      - - {x: 32.5, y: -10.5}
+        - {x: 35.5, y: -15.5}
+        - {x: 38.5, y: -13.5}
+        - {x: 37.5, y: -8.5}
+        - {x: 35.5, y: -6.5}
+        - {x: 32.5, y: -7.5}
+      - - {x: -62.5, y: 46.5}
+        - {x: -57.5, y: 41.5}
+        - {x: -54.5, y: 42.5}
+        - {x: -54.5, y: 44.5}
+        - {x: -59.5, y: 49.5}
+        - {x: -61.5, y: 49.5}
+    - name: Cirer_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 9
+        width: 186
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 117}
+        - {x: 51, y: 103}
+        - {x: 45, y: 95}
+        - {x: -33, y: 117}
+        - {x: -82, y: 117}
+        - {x: -93, y: 93}
+        - {x: -93, y: -108}
+        - {x: -84, y: -117}
+        - {x: 88, y: -117}
+        - {x: 93, y: -72}
+        - {x: 93, y: 112}
+        - {x: 76, y: 117}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

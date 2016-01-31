@@ -4,6 +4,7 @@ using System.Collections;
 public class ActionPlace : MonoBehaviour {
 
 	public IEnumerator animateObject (string action) {
+		GetComponent<Animator> ().SetTrigger (action);
 		yield return null;
 	}
 
