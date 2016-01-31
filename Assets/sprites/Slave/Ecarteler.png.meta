@@ -1,0 +1,290 @@
+fileFormatVersion: 2
+guid: f4adb9cbf4518474486b3667fe48cb59
+timeCreated: 1454244971
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ecarteler_0
+    21300002: Ecarteler_1
+    21300004: Ecarteler_2
+    21300006: Ecarteler_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Ecarteler_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 161
+        width: 186
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79, y: 117}
+        - {x: -84, y: 115}
+        - {x: -93, y: 90}
+        - {x: -93, y: -111}
+        - {x: -84, y: -117}
+        - {x: 89, y: -117}
+        - {x: 93, y: -19}
+        - {x: 93, y: 100}
+        - {x: 74, y: 117}
+      - - {x: 87, y: -113}
+        - {x: 86, y: -117}
+        - {x: 93, y: -117}
+        - {x: 93, y: -110}
+        - {x: 91, y: -110}
+    - name: Ecarteler_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 113
+        width: 192
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: 134.5}
+        - {x: -96, y: 134.5}
+        - {x: -96, y: -98.5}
+        - {x: -90, y: -119.5}
+        - {x: -46, y: -118.5}
+        - {x: -33, y: -98.5}
+        - {x: 17, y: -134.5}
+        - {x: 39, y: -134.5}
+        - {x: 44, y: -132.5}
+        - {x: 87, y: -106.5}
+        - {x: 96, y: -33.5}
+        - {x: 96, y: 121.5}
+      - - {x: -96, y: 130.5}
+        - {x: -96, y: 113.5}
+        - {x: -95, y: 113.5}
+        - {x: -89, y: 119.5}
+        - {x: -89, y: 123.5}
+        - {x: -95, y: 130.5}
+    - name: Ecarteler_2
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 38
+        width: 264
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 192}
+        - {x: 22, y: 195}
+        - {x: 5, y: 162}
+        - {x: 26, y: 133}
+        - {x: 35, y: 132}
+        - {x: 38, y: 134}
+        - {x: 41, y: 138}
+        - {x: 37, y: 132}
+        - {x: 35, y: 126}
+        - {x: 30, y: 107}
+        - {x: 35, y: 105}
+        - {x: 40, y: 105}
+        - {x: 57, y: 99}
+        - {x: 7, y: 84}
+        - {x: -19, y: 202}
+        - {x: -26, y: 205}
+        - {x: -76, y: 205}
+        - {x: -110, y: 154}
+        - {x: -83, y: 111}
+        - {x: -65, y: 112}
+        - {x: -58, y: 120}
+        - {x: -60, y: 142}
+        - {x: -62, y: 146}
+        - {x: -62, y: 151}
+        - {x: -52, y: 126}
+        - {x: -83, y: 88}
+        - {x: -132, y: -90}
+        - {x: -132, y: -173}
+        - {x: -84, y: -186}
+        - {x: -15, y: -141}
+        - {x: -17, y: -116}
+        - {x: -24, y: -111}
+        - {x: -30, y: -111}
+        - {x: -20, y: -103}
+        - {x: -7, y: -95}
+        - {x: -12, y: -161}
+        - {x: 73, y: -205}
+        - {x: 127, y: -205}
+        - {x: 132, y: -203}
+        - {x: 132, y: 174}
+        - {x: 131, y: 205}
+        - {x: 129, y: 205}
+        - {x: 82, y: 187}
+        - {x: 81, y: 175}
+      - - {x: 95, y: -127}
+        - {x: 91, y: -129}
+        - {x: 91, y: -137}
+        - {x: 94, y: -138}
+        - {x: 106, y: -138}
+        - {x: 107, y: -134}
+        - {x: 107, y: -129}
+        - {x: 105, y: -127}
+      - - {x: 108, y: -63}
+        - {x: 103, y: -65}
+        - {x: 94, y: -91}
+        - {x: 99, y: -95}
+        - {x: 104, y: -100}
+        - {x: 106, y: -100}
+        - {x: 92, y: -99}
+        - {x: 87, y: -101}
+        - {x: 87, y: -124}
+        - {x: 99, y: -133}
+        - {x: 132, y: -133}
+        - {x: 132, y: -66}
+        - {x: 123, y: -63}
+      - - {x: 21, y: -94}
+        - {x: 13, y: -94}
+        - {x: 11, y: -99}
+        - {x: 11, y: -107}
+        - {x: 14, y: -108}
+        - {x: 20, y: -108}
+        - {x: 24, y: -103}
+        - {x: 24, y: -98}
+      - - {x: -84, y: -86}
+        - {x: -88, y: -89}
+        - {x: -88, y: -94}
+        - {x: -86, y: -96}
+        - {x: -82, y: -96}
+        - {x: -79, y: -93}
+        - {x: -79, y: -89}
+        - {x: -82, y: -86}
+      - - {x: 88, y: -82}
+        - {x: 88, y: -87}
+        - {x: 89, y: -89}
+        - {x: 98, y: -89}
+        - {x: 103, y: -87}
+        - {x: 103, y: -82}
+        - {x: 101, y: -80}
+        - {x: 90, y: -80}
+      - - {x: -91, y: 115}
+        - {x: -94, y: 111}
+        - {x: -94, y: 103}
+        - {x: -93, y: 102}
+        - {x: -82, y: 102}
+        - {x: -81, y: 106}
+        - {x: -81, y: 113}
+        - {x: -85, y: 115}
+      - - {x: 129, y: 133}
+        - {x: 123, y: 122}
+        - {x: 123, y: 117}
+        - {x: 130, y: 111}
+        - {x: 132, y: 111}
+        - {x: 132, y: 133}
+      - - {x: -96, y: 140}
+        - {x: -97, y: 136}
+        - {x: -97, y: 131}
+        - {x: -94, y: 130}
+        - {x: -89, y: 130}
+        - {x: -87, y: 132}
+        - {x: -87, y: 137}
+        - {x: -90, y: 140}
+    - name: Ecarteler_3
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 100
+        width: 220
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69, y: 146.5}
+        - {x: -81, y: 117.5}
+        - {x: -110, y: -82.5}
+        - {x: -110, y: -97.5}
+        - {x: -100, y: -98.5}
+        - {x: -95, y: -103.5}
+        - {x: -93, y: -103.5}
+        - {x: -107, y: -102.5}
+        - {x: -110, y: -104.5}
+        - {x: -110, y: -120.5}
+        - {x: -92, y: -142.5}
+        - {x: -85, y: -146.5}
+        - {x: 52, y: -146.5}
+        - {x: 110, y: -23.5}
+        - {x: 110, y: 146.5}
+      - - {x: 0, y: -142.5}
+        - {x: 2, y: -145.5}
+        - {x: 7, y: -145.5}
+        - {x: 13, y: -143.5}
+        - {x: 13, y: -138.5}
+        - {x: 12, y: -136.5}
+        - {x: 3, y: -136.5}
+        - {x: 0, y: -139.5}
+      - - {x: -105, y: -130.5}
+        - {x: -108, y: -132.5}
+        - {x: -108, y: -139.5}
+        - {x: -104, y: -141.5}
+        - {x: -93, y: -141.5}
+        - {x: -92, y: -140.5}
+        - {x: -92, y: -131.5}
+        - {x: -93, y: -130.5}
+      - - {x: -110, y: -92.5}
+        - {x: -101, y: -92.5}
+        - {x: -96, y: -90.5}
+        - {x: -96, y: -83.5}
+        - {x: -110, y: -83.5}
+      - - {x: -110, y: 146.5}
+        - {x: -110, y: 60.5}
+        - {x: -94, y: 60.5}
+        - {x: -78, y: 97.5}
+        - {x: -78, y: 142.5}
+        - {x: -81, y: 146.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
