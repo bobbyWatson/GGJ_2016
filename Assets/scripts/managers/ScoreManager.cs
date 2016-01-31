@@ -6,6 +6,12 @@ public class ScoreManager : MonoBehaviour {
 	public int score = 0;
 	public ScoreUnit[] units;
 
+	public int victoryScore = 5;
+	private float timePassed;
+	public float timeInterval = 4f;
+	public int pointsLostPerInterval = 1;
+
+
 	public void AddPoints(int points){
 		for (int i = 0; i < points; i++) {
 			if (score + 1 <= 0) {
@@ -37,10 +43,6 @@ public class ScoreManager : MonoBehaviour {
 			this.RemovePoints (-points);
 		}
 	}
-
-	private float timePassed;
-	public float timeInterval = 4f;
-	public int pointsLostPerInterval = 1;
 
 	IEnumerator Start() {
 		while (true) {
