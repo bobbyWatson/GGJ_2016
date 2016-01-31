@@ -11,6 +11,9 @@ public partial class Player : MonoBehaviour {
 	private Rigidbody2D mRigidBody;
 	public int speed;
 
+	public bool canMove = true;
+	public float canMoveTime = 0f;
+
 	void AwakeLouis(){
 		cam = Camera.main;
 		mRigidBody = GetComponent<Rigidbody2D> ();
@@ -37,16 +40,30 @@ public partial class Player : MonoBehaviour {
 
 	void UpdateLouis(){
 		animator.SetFloat ("speed", mRigidBody.velocity.magnitude);
+		updateCanMove ();
 	}
 
 	void Move(){
-		Vector2 force = new Vector2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
-		animator.SetBool ("moving", force.magnitude > 0);
-		mRigidBody.AddForce(force);
-		if (force.x < 0) {
-			mTransform.localScale = new Vector3 (-1, 1, 1);
-		} else if(force.x > 0){
-			mTransform.localScale = new Vector3 (1, 1, 1);
+		if (canMove) {
+			Vector2 force = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical")) * speed;
+			animator.SetBool ("moving", force.magnitude > 0);
+			mRigidBody.AddForce (force);
+			if (force.x < 0) {
+				mTransform.localScale = new Vector3 (-1, 1, 1);
+			} else if (force.x > 0) {
+				mTransform.localScale = new Vector3 (1, 1, 1);
+			}
+		}
+	}
+
+	void setCantMoveForSeconds(float seconds) {
+		canMove = false;
+		canMoveTime = Time.time + seconds;
+	}
+
+	void updateCanMove() {
+		if (!canMove && Time.time >= canMoveTime) {
+			canMove = true;
 		}
 	}
 

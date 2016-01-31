@@ -10,10 +10,11 @@ public class end : MonoBehaviour {
 	private int best_score;
 	private int previous_run;
 	private string state;
+	private float startTime;
 
 	// Use this for initialization
 	void Start () {
-
+		startTime = Time.time;
 		//DEBUG ONLY
 		if (!PlayerPrefs.HasKey("best_score")) {
 			PlayerPrefs.SetInt ("best_score", 0);
@@ -28,7 +29,7 @@ public class end : MonoBehaviour {
 			Debug.Log ("state set to victory");
 		}
 		//DEBUG ONLY
-		PlayerPrefs.SetString("state", "victory");
+		//PlayerPrefs.SetString("state", "victory");
 
 		state = PlayerPrefs.GetString ("state");
 		previous_run = PlayerPrefs.GetInt ("nb_run");
@@ -67,13 +68,8 @@ public class end : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKeyDown) {
-			if (state == "victory") {
-				SceneManager.LoadScene ("Menu");
-			} else {
-				SceneManager.LoadScene ("Intro");
-			}
-
+		if (Time.time-startTime>2 && Input.anyKeyDown) {
+			SceneManager.LoadScene ("Menu");
 		}
 	}
 

@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	private float timePassed;
-	public float timeInterval;
+	public float timeInterval = 4f;
 	public int pointsLostPerInterval = 1;
 
 	IEnumerator Start() {

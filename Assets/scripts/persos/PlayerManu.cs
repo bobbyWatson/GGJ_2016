@@ -18,6 +18,9 @@ public partial class Player : MonoBehaviour {
 	}
 
 	public IEnumerator animateAction(ActionPlace place, PlayerInput input) {
+
+		this.setCantMoveForSeconds (1.5f);
+
 		mCollider.enabled = false;
 		Vector3 playerPos = this.mTransform.position;
 		mTransform.position = place.gameObject.transform.position;
@@ -43,8 +46,9 @@ public partial class Player : MonoBehaviour {
 	}
 
 	void UpdateManu(){
-		if (!inSecondPhase)
+		if (!inSecondPhase || GameManager.singleton == null) {
 			return;
+		}
 		// Update generatorInRange
 		if (this.ritualObject == null) {
 			this.generatorInRange = this.getGeneratorInRange ();
@@ -61,7 +65,10 @@ public partial class Player : MonoBehaviour {
 		}
 
 		// Update UI
-		GameManager.singleton.temporaryUItext.text = this.GetPlayerActionsInfo();
+		if (GameManager.singleton!=null && GameManager.singleton.temporaryUItext != null) {
+			GameManager.singleton.temporaryUItext.text = this.GetPlayerActionsInfo ();
+		}
+
 		if (Input.GetAxis("DownAction") > 0.5f) {
 
 			if (this.ritualObject==null && this.generatorInRange != null) {
@@ -113,15 +120,21 @@ public partial class Player : MonoBehaviour {
 	}
 
 	public Generator getGeneratorInRange() {
-		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
-		Generator gen = GameManager.singleton.GetGenerator (handsPosition, grabRange);
-		return gen; // may be null
+		if(this.inSecondPhase && GameManager.singleton != null && GameManager.singleton.ritualObjectsGenerators != null){
+		   Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
+		   Generator gen = GameManager.singleton.GetGenerator (handsPosition, grabRange);
+		   return gen; // may be null
+		} 
+		return null;
 	}
 
 	public ActionPlace getActionPlaceInRange() {
-		Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
-		ActionPlace ap = GameManager.singleton.GetClosestActionPlace (handsPosition, useRange);
-		return ap; // may be null
+		if(this.inSecondPhase && GameManager.singleton != null && GameManager.singleton.ritualObjectsGenerators != null){
+		   Vector3 handsPosition = this.mTransform.position + new Vector3 (0f, 25f, 0f);
+		   ActionPlace ap = GameManager.singleton.GetClosestActionPlace (handsPosition, useRange);
+		   return ap; // may be null
+		}
+		return null;
 	}
 
 

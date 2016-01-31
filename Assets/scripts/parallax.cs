@@ -14,6 +14,7 @@ public class parallax : MonoBehaviour {
 	}
 
 	// Update is called once per frame
+	/*
 	void Update () {
 		cinematique_front = GameObject.FindGameObjectWithTag ("front");
 		cinematique_middle = GameObject.FindGameObjectWithTag ("middle");
@@ -24,5 +25,5 @@ public class parallax : MonoBehaviour {
 		cinematique_back.transform.Translate (-0.2f*Time.deltaTime, 0, 0);
 		cinematique_sky.transform.Translate (-0.1f*Time.deltaTime, 0, 0);
 	}
-
+    */
 }
