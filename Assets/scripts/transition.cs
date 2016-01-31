@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class intro : MonoBehaviour {
+public class transition : MonoBehaviour {
 
 	public GameObject[] cinematique_bloc;
 	private GameObject current_scene;
@@ -38,15 +38,16 @@ public class intro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.time-startTime > 2f && Input.anyKeyDown) {
-			SceneManager.LoadScene ("Game");
+			SceneManager.LoadScene ("Manu");
 		}
 	}
+
 
 	IEnumerator SleepSecs (float secs) {
 		yield return new WaitForSeconds(secs);
 		StartCoroutine(SleepSecs(3));
 		if (i == nb_screen) {
-			SceneManager.LoadScene ("Game");
+			SceneManager.LoadScene ("Manu");
 		} else {
 			Destroy(current_scene);
 			i++;
