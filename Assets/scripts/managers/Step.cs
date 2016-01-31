@@ -71,7 +71,7 @@ Toutes  les 4 secondes inactives : ­ 5*/
 		} else if (place && !action) {
 			score += 2;
 		} else { // !place
-			score += action ? 0 : -6;
+			score += action ? -1 : -6;
 		}
 
 		int totalTime = (int) (actual.endTime - actual.startTime);
