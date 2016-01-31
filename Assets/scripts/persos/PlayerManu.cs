@@ -109,10 +109,16 @@ public partial class Player : MonoBehaviour {
 			if(pressedOther) {
 				this.ritualObject.Action (playerInput);
 
+
 				GameManager.singleton.scoreManager.resetTimer ();
+
 				// update current step info and start next step
 				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name;
 				GameManager.singleton.currentStep.playerInput = playerInput;
+
+				int actionScore = Step.scoreAction (GameManager.singleton.currentStep, GameManager.singleton.currentOptimalStep());
+				GameManager.singleton.scoreManager.AddGenPoints (actionScore);
+
 				GameManager.singleton.startNewStep ();
 			}
 		}
