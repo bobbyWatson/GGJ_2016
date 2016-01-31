@@ -40,7 +40,9 @@ public class Pnj : MonoBehaviour {
 	}
 
 	public void SetAlpha (float alpha){
-		bulle.GetComponent<	SpriteRenderer> ().color = new Color (1, 1, 1, alpha);
-		bulle.GetComponentInChildren<Text> ().color = new Color (0, 0, 0, alpha);
+		if (bulle != null) {
+			bulle.GetComponent<	SpriteRenderer> ().color = new Color (1, 1, 1, alpha);
+			bulle.GetComponentInChildren<Text> ().color = new Color (0, 0, 0, alpha);
+		}
 	}
 }

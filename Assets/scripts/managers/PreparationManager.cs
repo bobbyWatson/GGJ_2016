@@ -14,7 +14,7 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
-	public const float TOTAL_TIME = 45;
+	public const float TOTAL_TIME = 10f;
 
 	public SpriteRenderer blackScreen;
 	public Sprite leftBotPnj;
@@ -61,7 +61,7 @@ public class PreparationManager : MonoBehaviour {
 			yield return null;
 			timer += Time.deltaTime;
 		}
-		SceneManager.LoadScene ("Game");
+		SceneManager.LoadScene ("Manu");
 	}
 
 	public void Init(){
@@ -75,6 +75,9 @@ public class PreparationManager : MonoBehaviour {
 			chosenLD = Random.Range(0,3);
 		}while(chosenLD == previousLD);
 		PlayerPrefs.SetInt ("PREVIOUS_LD", chosenLD);
+
+		//GameObject.FindWithTag ("Player").GetComponent<Player> ().camFollowActive = true;
+
 		//Get Spots
 		spots = new GroupSpot[spotRoot.childCount + 1];
 		foreach (Transform t in spotRoot) {
