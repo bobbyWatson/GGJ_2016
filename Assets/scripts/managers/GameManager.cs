@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour {
 		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
 		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
 
-		singleton.player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
+		//singleton.player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
 		singleton.player.inSecondPhase = true;
 
 		singleton.ritualObjectsGenerators = new List<Generator> ();

@@ -22,16 +22,20 @@ public partial class Player : MonoBehaviour {
 		Vector3 playerPos = this.mTransform.position;
 		mTransform.position = place.gameObject.transform.position;
 
+		string objName = this.ritualObject.objectName();
 
 		animator.SetTrigger ("Action");
-		yield return new WaitForSeconds (0.5f);
+		Debug.Log ("toto");
+		//yield return null;//new WaitForSeconds (2f);
+		Debug.Log ("endAction");
 		animator.SetTrigger ("EndAction");
 
-		string actionName = Triplets.getActionName (this.ritualObject.objectName (), place.gameObject.name, input);
+		string actionName = Triplets.getActionName (objName, place.gameObject.name, input);
 		StartCoroutine(place.animateObject (actionName));
 
 		mTransform.position = playerPos;
 		mCollider.enabled = true;
+		yield break;
 	}
 
 	void FixedUpdateManu(){
