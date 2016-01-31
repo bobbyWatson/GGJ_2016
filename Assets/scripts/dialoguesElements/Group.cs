@@ -6,8 +6,8 @@ using UnityEditor;
 public class Group : MonoBehaviour {
 
 	public const int CONVERSATION_NB = 3;
-	public const float FULL_DIALOGUE_RADIUS = 200;
-	public const float TWEEN_DIALOGUE_RADIUS = 400;
+	public const float FULL_DIALOGUE_RADIUS = 100;
+	public const float TWEEN_DIALOGUE_RADIUS = 600;
 	public Pnj[] pnjs;
 
 	private Transform player;
@@ -71,11 +71,13 @@ public class Group : MonoBehaviour {
 			}
 			//tween value
 			float tweenValue;
-			if (dist < FULL_DIALOGUE_RADIUS) {
+			if (dist > FULL_DIALOGUE_RADIUS) {
+				Debug.Log ("toto");
 				tweenValue = TweenConversation (dist);				
 			} else {
-				tweenValue = 1;
+				tweenValue = 0.9f;
 			}
+			Debug.Log (tweenValue);
 			currentConversation.SetAlpha (tweenValue);
 		} else {
 			if (currentConversation != null) {
@@ -86,7 +88,7 @@ public class Group : MonoBehaviour {
 	}
 
 	float TweenConversation(float dist){
-		return Mathf.Lerp(0f,1f, (TWEEN_DIALOGUE_RADIUS - FULL_DIALOGUE_RADIUS) / Mathf.Max((dist - FULL_DIALOGUE_RADIUS),0.0001f));
+		return Mathf.Lerp(0.9f,0f, ((dist - FULL_DIALOGUE_RADIUS) / (TWEEN_DIALOGUE_RADIUS - FULL_DIALOGUE_RADIUS)));
 	}
 
 	void ChooseCoversation(){
@@ -102,4 +104,5 @@ public class Group : MonoBehaviour {
 		ChooseCoversation ();
 		currentConversation.Play ();
 	}
+
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 658e597f43f26f5429c1e23773ffd996
-timeCreated: 1454188434
+timeCreated: 1454193987
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: Planche-Marche-PersoPrincipal_7
     21300016: Planche-Marche-PersoPrincipal_8
     21300018: Planche-Marche-PersoPrincipal_9
+    21300020: Planche-Marche-PersoPrincipal_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -68,7 +69,7 @@ TextureImporter:
         width: 113
         height: 282
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 41.5, y: 141}
@@ -87,7 +88,7 @@ TextureImporter:
         width: 127
         height: 273
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 32.5, y: 136.5}
@@ -109,7 +110,7 @@ TextureImporter:
         width: 161
         height: 278
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 19.5, y: 139}
@@ -130,7 +131,7 @@ TextureImporter:
         width: 137
         height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -68.5, y: 116.5}
@@ -153,7 +154,7 @@ TextureImporter:
         width: 120
         height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -7, y: 139.5}
@@ -172,7 +173,7 @@ TextureImporter:
         width: 131
         height: 281
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -22.5, y: 140.5}
@@ -200,7 +201,7 @@ TextureImporter:
         width: 133
         height: 276
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 32.5, y: 138}
@@ -223,7 +224,7 @@ TextureImporter:
         width: 121
         height: 282
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 50.5, y: -117}
@@ -249,7 +250,7 @@ TextureImporter:
         width: 121
         height: 277
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 46.5, y: 138.5}
@@ -270,7 +271,7 @@ TextureImporter:
         width: 113
         height: 282
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -21.5, y: 141}
@@ -282,6 +283,25 @@ TextureImporter:
         - {x: 56.5, y: -133}
         - {x: 56.5, y: 123}
         - {x: 26.5, y: 141}
+    - name: Planche-Marche-PersoPrincipal_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 721
+        width: 113
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.5, y: 141}
+        - {x: -27.5, y: 141}
+        - {x: -56.5, y: 129}
+        - {x: -56.5, y: -133}
+        - {x: -35.5, y: -141}
+        - {x: 52.5, y: -141}
+        - {x: 56.5, y: -133}
+        - {x: 56.5, y: 109}
     outline: []
   spritePackingTag: 
   userData: 

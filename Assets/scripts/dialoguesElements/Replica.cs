@@ -14,6 +14,10 @@ public class Replica : object {
 		conv.group.pnjs [character].StartReplica (this);
 	}
 
+	public void SetAlpha(float alpha){
+		conv.group.pnjs [character].SetAlpha(alpha);
+	}
+
 	public void Stop(){
 		conv.group.pnjs [character].StopReplica ();
 	}

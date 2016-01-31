@@ -20,7 +20,7 @@ public class Conversation : object {
 	}
 
 	public void SetAlpha(float alpha){
-
+		replicas [currentReplica].SetAlpha (alpha);
 	}
 
 	public void ReplicaFinished (){

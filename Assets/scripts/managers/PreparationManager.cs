@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PreparationManager : MonoBehaviour {
 	//singleton
@@ -13,6 +14,9 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
+	public const float TOTAL_TIME = 45;
+
+	public SpriteRenderer blackScreen;
 	public Sprite leftBotPnj;
 	public Sprite leftTopPnj;
 	public Sprite rightTopPnj;
@@ -28,8 +32,36 @@ public class PreparationManager : MonoBehaviour {
 	//privates
 
 	//methods
-	public void Start(){
+	public IEnumerator Start(){
 		Init ();
+		//fade in
+		blackScreen.gameObject.SetActive (true);
+		float timer = 0;
+		Color c = new Color (0, 0, 0, 0);
+		while (timer < 1) {
+			c.a = Mathf.Lerp (1, 0, timer / 1f);
+			blackScreen.color = c;
+			yield return null;
+			timer += Time.deltaTime;
+		}
+		blackScreen.gameObject.SetActive (false);
+		//game timer;
+		timer = 0;
+		while (timer < TOTAL_TIME) {
+			yield return null;
+			timer += Time.deltaTime;
+		}
+		//fade out
+		blackScreen.gameObject.SetActive (true);
+		timer = 0;
+		c = new Color (0, 0, 0, 0);
+		while (timer < 1) {
+			c.a = Mathf.Lerp (0, 1, timer / 1f);
+			blackScreen.color = c;
+			yield return null;
+			timer += Time.deltaTime;
+		}
+		SceneManager.LoadScene ("Main");
 	}
 
 	public void Init(){

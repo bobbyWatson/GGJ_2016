@@ -22,7 +22,7 @@ public class Pnj : MonoBehaviour {
 		phrase.transform.localScale = Vector3.one;
 		phrase.GetComponentInChildren<Text> ().text = replica.text;
 
-		Debug.Log (name + " is saying : " + replica.text);
+		//Debug.Log (name + " is saying : " + replica.text);
 		StartCoroutine (EndOfReplica (replica));
 	}
 
@@ -37,5 +37,10 @@ public class Pnj : MonoBehaviour {
 
 	public void StopReplica(){
 		stop = true;
+	}
+
+	public void SetAlpha (float alpha){
+		bulle.GetComponent<	SpriteRenderer> ().color = new Color (1, 1, 1, alpha);
+		bulle.GetComponentInChildren<Text> ().color = new Color (0, 0, 0, alpha);
 	}
 }
