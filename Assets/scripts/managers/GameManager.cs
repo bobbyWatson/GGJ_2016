@@ -166,6 +166,13 @@ public class GameManager : MonoBehaviour {
 
 		// check if end of game:
 		if (steps.Count == optimalSteps.Count) {
+
+			if (scoreManager.score >= scoreManager.victoryScore) {
+				PlayerPrefs.SetString ("state", "victory");
+			} else {
+				PlayerPrefs.SetString ("state", "defeat");
+			}
+				
 			SceneManager.LoadScene ("End");
 		}
 

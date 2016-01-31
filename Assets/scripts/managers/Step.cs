@@ -41,7 +41,21 @@ Mauvais lieu, mauvais objet, : -­6 (Total : ­6 points)
 Toutes  les 4 secondes inactives : ­ 5*/
 
 	public static int scoreObject(Step actual, Step opt) {
-		return actual==opt ? 2 : 0;
+		return actual.ritualObject == opt.ritualObject ? 2 : 0;
+	}
+
+	public static int scoreAction(Step actual, Step opt) {
+		bool place = actual.actionPlace == opt.ritualObject;
+		bool action = actual.playerInput == opt.playerInput;
+
+		if (place && action) {
+			return 6;
+		} else if (place && !action) {
+			return 2;
+		} else { // !place
+			return action ? 0 : -6;
+		}
+
 	}
 
 	public static int score(Step actual, Step opt) {
@@ -57,7 +71,7 @@ Toutes  les 4 secondes inactives : ­ 5*/
 		} else if (place && !action) {
 			score += 2;
 		} else { // !place
-			score += action ? 0 : -6;
+			score += action ? -1 : -6;
 		}
 
 		int totalTime = (int) (actual.endTime - actual.startTime);
