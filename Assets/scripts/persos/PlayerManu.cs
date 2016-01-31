@@ -7,8 +7,8 @@ public partial class Player : MonoBehaviour {
 	public Generator generatorInRange; // current closest generator of ritual objects
 	public ActionPlace actionPlace; // current closest action place
 
-	private static float grabRange = 50.0f;
-	private static float useRange = 50.0f;
+	private static float grabRange = 100.0f;
+	private static float useRange = 200.0f;
 
 	void AwakeManu (){
 	}
@@ -28,12 +28,12 @@ public partial class Player : MonoBehaviour {
 		string objName = this.ritualObject.objectName();
 
 		animator.SetTrigger ("Action");
-		Debug.Log ("toto");
-		//yield return null;//new WaitForSeconds (2f);
-		Debug.Log ("endAction");
+		yield return new WaitForSeconds (1f);
 		animator.SetTrigger ("EndAction");
 
 		string actionName = Triplets.getActionName (objName, place.gameObject.name, input);
+
+		yield return new WaitForSeconds (1f);
 		StartCoroutine(place.animateObject (actionName));
 
 		mTransform.position = playerPos;
@@ -109,10 +109,16 @@ public partial class Player : MonoBehaviour {
 			if(pressedOther) {
 				this.ritualObject.Action (playerInput);
 
+
 				GameManager.singleton.scoreManager.resetTimer ();
+
 				// update current step info and start next step
 				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name;
 				GameManager.singleton.currentStep.playerInput = playerInput;
+
+				int actionScore = Step.scoreAction (GameManager.singleton.currentStep, GameManager.singleton.currentOptimalStep());
+				GameManager.singleton.scoreManager.AddGenPoints (actionScore);
+
 				GameManager.singleton.startNewStep ();
 			}
 		}

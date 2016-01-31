@@ -11,9 +11,15 @@ public class intro : MonoBehaviour {
 	private int nb_screen = 1;
 	private Text Nb_run_display;
 
+	private float startTime;
+
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(SleepSecs(3));
+
+		startTime = Time.time;
+		//StartCoroutine(SleepSecs(3));
+
+		/*
 		current_scene = (GameObject) Instantiate(cinematique_bloc[i], new Vector3(0, 1, 20), Quaternion.identity);
 		Nb_run_display = GameObject.Find("nb_run").GetComponent<Text>();
 		Debug.Log (PlayerPrefs.GetInt ("nb_run"));
@@ -26,15 +32,15 @@ public class intro : MonoBehaviour {
 			PlayerPrefs.SetInt ("nb_run", PlayerPrefs.GetInt ("nb_run") + 1);
 			Nb_run_display.text = "Run no " + PlayerPrefs.GetInt ("nb_run");
 		}
+		*/
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKeyDown) {
+		if (Time.time-startTime > 2f && Input.anyKeyDown) {
 			SceneManager.LoadScene ("Game");
 		}
 	}
-
 
 	IEnumerator SleepSecs (float secs) {
 		yield return new WaitForSeconds(secs);

@@ -24,7 +24,7 @@ abstract public class RitualObject : MonoBehaviour {
 	public void Action(PlayerInput playerInput) { // action when player has object and presses Action (depends on position)
 
 		Player player = GameManager.singleton.player;
-		StartCoroutine(player.animateAction(player.actionPlace, playerInput));
+		player.StartCoroutine(player.animateAction(player.actionPlace, playerInput));
 		Destroy(this.gameObject);
 		player.ritualObject = null;
 

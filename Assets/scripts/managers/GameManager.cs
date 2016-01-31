@@ -18,15 +18,12 @@ public class GameManager : MonoBehaviour {
 		List<Step> result = new List<Step> ();
 		result.Add (new Step ("Candle", "Statue", PlayerInput.Left)); // offrir
 		result.Add (new Step ("Knife", "Statue", PlayerInput.Up)); // decapiter
-
-		/*
 		result.Add (new Step ("Hammer", "Stoup", PlayerInput.Right)); // frapper
 		result.Add (new Step ("Pineapple", "Stoup", PlayerInput.Left)); // benir
 		result.Add (new Step ("Knife", "Poney", PlayerInput.Up)); // licorne
 		result.Add (new Step ("Pineapple", "Poney", PlayerInput.Up)); // violer
 		result.Add (new Step ("Blood", "Stoup", PlayerInput.Up)); // melanger
 		result.Add (new Step ("Chain", "Stoup", PlayerInput.Up)); // rester perplexe
-        */
 
 		return result;
 	}
@@ -76,6 +73,7 @@ public class GameManager : MonoBehaviour {
 		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
 
 		//singleton.player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
+		singleton.player.inSecondPhase = true;
 
 		singleton.ritualObjectsGenerators = new List<Generator> ();
 		foreach(GameObject genGO in GameObject.FindGameObjectsWithTag("GENERATOR")) {
@@ -93,10 +91,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start() {
-		if(SceneManager.GetActiveScene().name == "Manu") {
-			singleton.player.inSecondPhase = true;
-		}
-
 		this.optimalSteps = this.GenerateOptimalsSteps ();
 		this.startNewStep ();
 

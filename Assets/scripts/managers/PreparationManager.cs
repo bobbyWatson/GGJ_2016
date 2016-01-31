@@ -14,7 +14,7 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
-	public const float TOTAL_TIME = 60f;
+	public const float TOTAL_TIME = 45f;
 
 	public SpriteRenderer blackScreen;
 	public Sprite leftBotPnj;
@@ -61,7 +61,7 @@ public class PreparationManager : MonoBehaviour {
 			yield return null;
 			timer += Time.deltaTime;
 		}
-		SceneManager.LoadScene ("Manu");
+		SceneManager.LoadScene ("Transition");
 	}
 
 	public void Init(){

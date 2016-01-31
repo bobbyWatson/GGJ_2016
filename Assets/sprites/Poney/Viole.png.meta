@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 0ef84793ac0bdac479b883f468f5f936
+timeCreated: 1454252984
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Viole_0
+    21300002: Viole_1
+    21300004: Viole_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Viole_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 25
+        width: 215
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.5, y: -106.5}
+        - {x: 69.5, y: -106.5}
+        - {x: 107.5, y: -29.5}
+        - {x: 107.5, y: 106.5}
+        - {x: -28.5, y: 106.5}
+        - {x: -107.5, y: 68.5}
+        - {x: -107.5, y: -65.5}
+        - {x: -79.5, y: -106.5}
+        - {x: -60.5, y: -106.5}
+        - {x: -42.5, y: -105.5}
+        - {x: -34.5, y: -85.5}
+        - {x: -31.5, y: -97.5}
+        - {x: -29.5, y: -100.5}
+        - {x: -15.5, y: -100.5}
+        - {x: -12.5, y: -99.5}
+        - {x: -8.5, y: -96.5}
+        - {x: -6.5, y: -84.5}
+        - {x: 3.5, y: -104.5}
+        - {x: 5.5, y: -106.5}
+        - {x: 24.5, y: -106.5}
+        - {x: 32.5, y: -104.5}
+        - {x: 35.5, y: -91.5}
+        - {x: 33.5, y: -104.5}
+      - - {x: 80.5, y: 18.5}
+        - {x: 80.5, y: 17.5}
+        - {x: 83.5, y: 14.5}
+        - {x: 86.5, y: 15.5}
+        - {x: 86.5, y: 18.5}
+        - {x: 84.5, y: 20.5}
+        - {x: 82.5, y: 20.5}
+    - name: Viole_1
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 15
+        width: 255
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127.5, y: 78.5}
+        - {x: 99.5, y: 104.5}
+        - {x: 82.5, y: 108.5}
+        - {x: 66.5, y: 99.5}
+        - {x: 54.5, y: 115.5}
+        - {x: 11.5, y: 115.5}
+        - {x: -11.5, y: 88.5}
+        - {x: -8.5, y: 67.5}
+        - {x: 13.5, y: 42.5}
+        - {x: 15.5, y: 39.5}
+        - {x: -127.5, y: 38.5}
+        - {x: -127.5, y: -115.5}
+        - {x: 106.5, y: -115.5}
+        - {x: 109.5, y: 13.5}
+        - {x: 117.5, y: 14.5}
+        - {x: 127.5, y: 22.5}
+    - name: Viole_4
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 25
+        width: 207
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 103.5, y: -49.5}
+        - {x: 103.5, y: 77.5}
+        - {x: 75.5, y: 106.5}
+        - {x: 3.5, y: 106.5}
+        - {x: -91.5, y: 84.5}
+        - {x: -103.5, y: 79.5}
+        - {x: -103.5, y: -106.5}
+        - {x: 20.5, y: -106.5}
+        - {x: 24.5, y: -98.5}
+        - {x: 23.5, y: -106.5}
+        - {x: 58.5, y: -106.5}
+      - - {x: -102.5, y: -33.5}
+        - {x: -103.5, y: -34.5}
+        - {x: -103.5, y: -43.5}
+        - {x: -102.5, y: -43.5}
+        - {x: -96.5, y: -37.5}
+        - {x: -96.5, y: -35.5}
+        - {x: -98.5, y: -33.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

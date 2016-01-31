@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 435bc89f257d06d45b10b4e13757aff8
+timeCreated: 1454252082
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Nourrir_0
+    21300002: Nourrir_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Nourrir_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 151
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: -72.5}
+        - {x: 41.5, y: -73.5}
+        - {x: 41.5, y: -78.5}
+        - {x: 41.5, y: -76.5}
+        - {x: 40.5, y: -68.5}
+        - {x: 75.5, y: 79.5}
+        - {x: 75.5, y: 129.5}
+        - {x: 58.5, y: 177.5}
+        - {x: 16.5, y: 186.5}
+        - {x: -50.5, y: 186.5}
+        - {x: -62.5, y: 135.5}
+        - {x: -75.5, y: 50.5}
+        - {x: -75.5, y: -172.5}
+        - {x: -40.5, y: -187.5}
+        - {x: 52.5, y: -187.5}
+        - {x: 73.5, y: -174.5}
+        - {x: 75.5, y: -159.5}
+        - {x: 75.5, y: -91.5}
+      - - {x: 65.5, y: -150.5}
+        - {x: 67.5, y: -152.5}
+        - {x: 70.5, y: -151.5}
+        - {x: 70.5, y: -148.5}
+        - {x: 68.5, y: -146.5}
+        - {x: 65.5, y: -147.5}
+      - - {x: 33.5, y: -45.5}
+        - {x: 35.5, y: -47.5}
+        - {x: 38.5, y: -46.5}
+        - {x: 38.5, y: -43.5}
+        - {x: 36.5, y: -41.5}
+        - {x: 33.5, y: -42.5}
+      - - {x: 33.5, y: 6.5}
+        - {x: 35.5, y: 4.5}
+        - {x: 36.5, y: 4.5}
+        - {x: 39.5, y: 7.5}
+        - {x: 36.5, y: 12.5}
+        - {x: 33.5, y: 11.5}
+      - - {x: 28.5, y: 29.5}
+        - {x: 29.5, y: 28.5}
+        - {x: 34.5, y: 28.5}
+        - {x: 35.5, y: 29.5}
+        - {x: 35.5, y: 38.5}
+        - {x: 32.5, y: 39.5}
+        - {x: 29.5, y: 39.5}
+        - {x: 28.5, y: 37.5}
+      - - {x: -45.5, y: 42.5}
+        - {x: -45.5, y: 38.5}
+        - {x: -40.5, y: 30.5}
+        - {x: -37.5, y: 30.5}
+        - {x: -35.5, y: 32.5}
+        - {x: -36.5, y: 36.5}
+        - {x: -42.5, y: 43.5}
+      - - {x: 45.5, y: 77.5}
+        - {x: 48.5, y: 78.5}
+        - {x: 48.5, y: 81.5}
+        - {x: 45.5, y: 82.5}
+        - {x: 43.5, y: 80.5}
+      - - {x: 31.5, y: 118.5}
+        - {x: 29.5, y: 116.5}
+        - {x: 29.5, y: 114.5}
+        - {x: 32.5, y: 111.5}
+        - {x: 35.5, y: 111.5}
+        - {x: 36.5, y: 113.5}
+        - {x: 36.5, y: 116.5}
+        - {x: 35.5, y: 117.5}
+      - - {x: 25.5, y: 133.5}
+        - {x: 26.5, y: 130.5}
+        - {x: 29.5, y: 130.5}
+        - {x: 31.5, y: 132.5}
+        - {x: 30.5, y: 135.5}
+        - {x: 27.5, y: 135.5}
+      - - {x: -47.5, y: 170.5}
+        - {x: -49.5, y: 165.5}
+        - {x: -49.5, y: 160.5}
+        - {x: -45.5, y: 160.5}
+        - {x: -43.5, y: 163.5}
+        - {x: -42.5, y: 169.5}
+        - {x: -44.5, y: 171.5}
+      - - {x: -31.5, y: 187.5}
+        - {x: -31.5, y: 185.5}
+        - {x: -29.5, y: 183.5}
+        - {x: -26.5, y: 183.5}
+        - {x: -24.5, y: 185.5}
+        - {x: -25.5, y: 187.5}
+    - name: Nourrir_4
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 34
+        width: 152
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: -187}
+        - {x: -40, y: -185}
+        - {x: -43, y: -184}
+        - {x: -45, y: -187}
+      - - {x: 76, y: 80}
+        - {x: 76, y: 136}
+        - {x: 27, y: 187}
+        - {x: -43, y: 187}
+        - {x: -64, y: 156}
+        - {x: -58, y: -57}
+        - {x: -76, y: -60}
+        - {x: -76, y: -128}
+        - {x: -71, y: -155}
+        - {x: -31, y: -186}
+        - {x: 26, y: -186}
+        - {x: 74, y: -174}
+        - {x: 76, y: -167}
+        - {x: 76, y: -86}
+        - {x: 37, y: -22}
+      - - {x: 69, y: -167}
+        - {x: 72, y: -166}
+        - {x: 72, y: -163}
+        - {x: 69, y: -162}
+        - {x: 67, y: -164}
+      - - {x: -43, y: 21}
+        - {x: -40, y: 22}
+        - {x: -40, y: 25}
+        - {x: -43, y: 26}
+        - {x: -45, y: 24}
+      - - {x: 48, y: 147}
+        - {x: 51, y: 148}
+        - {x: 51, y: 151}
+        - {x: 48, y: 152}
+        - {x: 46, y: 150}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
