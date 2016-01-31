@@ -28,6 +28,18 @@ public class GameManager : MonoBehaviour {
 		return optimalSteps [numStep];
 	}
 
+	public int PlayerScore() {
+		int score = 0;
+		for (int i = 0; i < steps.Count; i++) {
+			score += Step.score (steps [i], optimalSteps [i]);
+		}
+
+		if(steps.Count < optimalSteps.Count) { // Add current Step score
+		    score += Step.currentStepScore(currentStep, optimalSteps[steps.Count]);
+		}
+		return score;
+	}
+
 	public List<Generator> ritualObjectsGenerators;
 	public List<ActionPlace> actionPlaces;
 

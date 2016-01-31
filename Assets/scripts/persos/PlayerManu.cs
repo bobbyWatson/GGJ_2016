@@ -82,10 +82,6 @@ public partial class Player : MonoBehaviour {
 			}
 		}
 
-
-			
-
-
 	}
 
 	public Generator getGeneratorInRange() {
@@ -135,9 +131,7 @@ public partial class Player : MonoBehaviour {
 		s.AppendLine ();
 
 		s.Append ("Score: ");
-		if (this.ritualObject != null) {
-			s.Append(this.ritualObject.getObjectiveScore());
-		} 
+		s.Append(GameManager.singleton.PlayerScore());
 		s.AppendLine ();
 
 
