@@ -17,6 +17,23 @@ public partial class Player : MonoBehaviour {
 
 	}
 
+	public IEnumerator animateAction(ActionPlace place, PlayerInput input) {
+		mCollider.enabled = false;
+		Vector3 playerPos = this.mTransform.position;
+		mTransform.position = place.gameObject.transform.position;
+
+
+		animator.SetTrigger ("Action");
+		yield return new WaitForSeconds (0.5f);
+		animator.SetTrigger ("EndAction");
+
+		string actionName = Triplets.getActionName (this.ritualObject.objectName (), place.gameObject.name, input);
+		StartCoroutine(place.animateObject (actionName));
+
+		mTransform.position = playerPos;
+		mCollider.enabled = true;
+	}
+
 	void FixedUpdateManu(){
 
 	}
@@ -27,6 +44,7 @@ public partial class Player : MonoBehaviour {
 		// Update generatorInRange
 		if (this.ritualObject == null) {
 			this.generatorInRange = this.getGeneratorInRange ();
+
 		} else {
 			this.generatorInRange = null;
 		}
@@ -49,11 +67,16 @@ public partial class Player : MonoBehaviour {
 				this.ritualObject.pickUpPosition = this.ritualObject.transform.position;
 				obj.transform.SetParent (this.transform);
 				GameManager.singleton.currentStep.ritualObject = this.ritualObject.objectName ();
+
+				int objScore = Step.scoreObject (GameManager.singleton.currentStep, 
+					                             GameManager.singleton.currentOptimalStep());
+				GameManager.singleton.scoreManager.AddGenPoints (objScore);
+
 			}
 
 		}
 
-		if (ritualObject != null && this.actionPlace != null) {
+		if (this.ritualObject != null && this.actionPlace != null) {
 			bool pressedOther = false;
 			PlayerInput playerInput = PlayerInput.Down;
 
@@ -75,10 +98,11 @@ public partial class Player : MonoBehaviour {
 			if(pressedOther) {
 				this.ritualObject.Action (playerInput);
 
+				GameManager.singleton.scoreManager.resetTimer ();
 				// update current step info and start next step
 				GameManager.singleton.currentStep.actionPlace = this.actionPlace.gameObject.name;
 				GameManager.singleton.currentStep.playerInput = playerInput;
-				GameManager.singleton.startStep ();
+				GameManager.singleton.startNewStep ();
 			}
 		}
 
