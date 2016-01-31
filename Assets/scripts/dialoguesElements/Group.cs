@@ -72,12 +72,10 @@ public class Group : MonoBehaviour {
 			//tween value
 			float tweenValue;
 			if (dist > FULL_DIALOGUE_RADIUS) {
-				Debug.Log ("toto");
 				tweenValue = TweenConversation (dist);				
 			} else {
 				tweenValue = 0.9f;
 			}
-			Debug.Log (tweenValue);
 			currentConversation.SetAlpha (tweenValue);
 		} else {
 			if (currentConversation != null) {

@@ -14,7 +14,7 @@ public class PreparationManager : MonoBehaviour {
 		}
 	}
 	//publics
-	public const float TOTAL_TIME = 10f;
+	public const float TOTAL_TIME = 60f;
 
 	public SpriteRenderer blackScreen;
 	public Sprite leftBotPnj;
