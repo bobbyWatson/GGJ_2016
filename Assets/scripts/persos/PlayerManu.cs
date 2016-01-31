@@ -27,6 +27,7 @@ public partial class Player : MonoBehaviour {
 		// Update generatorInRange
 		if (this.ritualObject == null) {
 			this.generatorInRange = this.getGeneratorInRange ();
+
 		} else {
 			this.generatorInRange = null;
 		}
@@ -53,7 +54,7 @@ public partial class Player : MonoBehaviour {
 
 		}
 
-		if (ritualObject != null && this.actionPlace != null) {
+		if (this.ritualObject != null && this.actionPlace != null) {
 			bool pressedOther = false;
 			PlayerInput playerInput = PlayerInput.Down;
 

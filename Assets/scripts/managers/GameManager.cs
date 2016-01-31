@@ -63,7 +63,9 @@ public class GameManager : MonoBehaviour {
 		DontDestroyOnLoad (singleton);
 		singleton.propsDefaultContainer = GameObject.FindWithTag("PROP_CONTAINER").transform;
 		singleton.temporaryUItext =  GameObject.Find("TemporaryText").GetComponent<UnityEngine.UI.Text>();
+
 		singleton.player = GameObject.FindWithTag ("Player").GetComponent<Player> ();
+		singleton.player.inSecondPhase = true;
 
 		singleton.ritualObjectsGenerators = new List<Generator> ();
 		foreach(GameObject genGO in GameObject.FindGameObjectsWithTag("GENERATOR")) {
@@ -84,9 +86,9 @@ public class GameManager : MonoBehaviour {
 		this.startStep ();
 
 		this.optimalSteps = this.GenerateOptimalsSteps ();
-		foreach (Step step in optimalSteps) {
-			Debug.Log (step.ToString());
-		}
+		//foreach (Step step in optimalSteps) {
+		//	Debug.Log (step.ToString());
+		//}
 
 	}
 
