@@ -172,7 +172,6 @@ public class GameManager : MonoBehaviour {
 			} else {
 				PlayerPrefs.SetString ("state", "defeat");
 			}
-				
 			SceneManager.LoadScene ("End");
 		}
 
