@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: 7bfd87f310af78248be7f5426feddd9f
+timeCreated: 1454252781
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Brule_0
+    21300002: Brule_1
+    21300004: Brule_2
+    21300006: Brule_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Brule_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 30
+        width: 215
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.5, y: -106.5}
+        - {x: 69.5, y: -106.5}
+        - {x: 107.5, y: -29.5}
+        - {x: 107.5, y: 106.5}
+        - {x: -12.5, y: 106.5}
+        - {x: -107.5, y: 55.5}
+        - {x: -107.5, y: -66.5}
+        - {x: -67.5, y: -104.5}
+        - {x: -44.5, y: -102.5}
+        - {x: -37.5, y: -92.5}
+        - {x: -37.5, y: -79.5}
+        - {x: -34.5, y: -99.5}
+        - {x: -14.5, y: -103.5}
+        - {x: -8.5, y: -96.5}
+        - {x: -6.5, y: -84.5}
+        - {x: 3.5, y: -104.5}
+        - {x: 5.5, y: -106.5}
+        - {x: 24.5, y: -106.5}
+        - {x: 32.5, y: -104.5}
+        - {x: 35.5, y: -91.5}
+        - {x: 33.5, y: -104.5}
+      - - {x: 104.5, y: -74.5}
+        - {x: 106.5, y: -76.5}
+        - {x: 107.5, y: -76.5}
+        - {x: 107.5, y: -62.5}
+        - {x: 104.5, y: -63.5}
+      - - {x: 86.5, y: 6.5}
+        - {x: 84.5, y: -12.5}
+        - {x: 84.5, y: -55.5}
+        - {x: 96.5, y: -60.5}
+        - {x: 107.5, y: -60.5}
+        - {x: 107.5, y: 22.5}
+        - {x: 104.5, y: 21.5}
+      - - {x: 80.5, y: 18.5}
+        - {x: 80.5, y: 17.5}
+        - {x: 83.5, y: 14.5}
+        - {x: 86.5, y: 15.5}
+        - {x: 86.5, y: 18.5}
+        - {x: 84.5, y: 20.5}
+        - {x: 82.5, y: 20.5}
+    - name: Brule_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 26
+        width: 257
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92.5, y: -106.5}
+        - {x: 128.5, y: -23.5}
+        - {x: 128.5, y: 106.5}
+        - {x: -128.5, y: 106.5}
+        - {x: -128.5, y: -81.5}
+        - {x: -120.5, y: -106.5}
+        - {x: 53.5, y: -106.5}
+        - {x: 55.5, y: -105.5}
+        - {x: 56.5, y: -91.5}
+        - {x: 57.5, y: -103.5}
+        - {x: 61.5, y: -106.5}
+      - - {x: 101.5, y: 18.5}
+        - {x: 101.5, y: 17.5}
+        - {x: 104.5, y: 14.5}
+        - {x: 107.5, y: 15.5}
+        - {x: 107.5, y: 18.5}
+        - {x: 105.5, y: 20.5}
+        - {x: 103.5, y: 20.5}
+      - - {x: -128.5, y: 80.5}
+        - {x: -128.5, y: 27.5}
+        - {x: -123.5, y: 27.5}
+        - {x: -105.5, y: 42.5}
+        - {x: -105.5, y: 74.5}
+        - {x: -116.5, y: 80.5}
+    - name: Brule_2
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 22
+        width: 204
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -118.5}
+        - {x: 68, y: -112.5}
+        - {x: 86, y: 8.5}
+        - {x: 83, y: 12.5}
+        - {x: 81, y: 14.5}
+        - {x: 85, y: 12.5}
+        - {x: 88, y: 12.5}
+        - {x: 102, y: 27.5}
+        - {x: 102, y: 70.5}
+        - {x: 65, y: 118.5}
+        - {x: -73, y: 118.5}
+        - {x: -86, y: 112.5}
+        - {x: -102, y: 76.5}
+        - {x: -102, y: -76.5}
+        - {x: -89, y: -118.5}
+        - {x: -52, y: -118.5}
+        - {x: -46, y: -110.5}
+        - {x: -42, y: -103.5}
+        - {x: -37, y: -112.5}
+        - {x: -20, y: -114.5}
+        - {x: -10, y: -105.5}
+        - {x: -3, y: -118.5}
+        - {x: 22, y: -118.5}
+        - {x: 30, y: -111.5}
+        - {x: 29, y: -116.5}
+        - {x: 36, y: -118.5}
+      - - {x: -5, y: -105.5}
+        - {x: -2, y: -104.5}
+        - {x: -2, y: -101.5}
+        - {x: -5, y: -100.5}
+        - {x: -7, y: -102.5}
+      - - {x: -9, y: -85.5}
+        - {x: -7, y: -87.5}
+        - {x: -4, y: -86.5}
+        - {x: -4, y: -82.5}
+        - {x: -6, y: -80.5}
+        - {x: -9, y: -81.5}
+      - - {x: 28, y: -61.5}
+        - {x: 31, y: -60.5}
+        - {x: 31, y: -57.5}
+        - {x: 28, y: -56.5}
+        - {x: 26, y: -58.5}
+      - - {x: 25, y: -50.5}
+        - {x: 27, y: -52.5}
+        - {x: 30, y: -51.5}
+        - {x: 30, y: -47.5}
+        - {x: 28, y: -45.5}
+        - {x: 25, y: -46.5}
+      - - {x: 74, y: -11.5}
+        - {x: 77, y: -14.5}
+        - {x: 80, y: -13.5}
+        - {x: 80, y: -11.5}
+        - {x: 77, y: -8.5}
+        - {x: 75, y: -8.5}
+      - - {x: 82, y: 7.5}
+        - {x: 76, y: 1.5}
+        - {x: 76, y: -7.5}
+        - {x: 84, y: -7.5}
+        - {x: 88, y: -5.5}
+        - {x: 88, y: 1.5}
+        - {x: 86, y: 7.5}
+      - - {x: 71, y: 1.5}
+        - {x: 69, y: -0.5}
+        - {x: 71, y: -5.5}
+        - {x: 73, y: -5.5}
+        - {x: 76, y: -4.5}
+        - {x: 76, y: -0.5}
+        - {x: 75, y: 1.5}
+      - - {x: 65, y: 1.5}
+        - {x: 67, y: -0.5}
+        - {x: 70, y: 0.5}
+        - {x: 70, y: 4.5}
+        - {x: 68, y: 6.5}
+        - {x: 65, y: 5.5}
+    - name: Brule_3
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 22
+        width: 212
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 125.5}
+        - {x: -4, y: 125.5}
+        - {x: -65, y: 81.5}
+        - {x: -106, y: 21.5}
+        - {x: -106, y: -79.5}
+        - {x: -67, y: -125.5}
+        - {x: 67, y: -125.5}
+        - {x: 73, y: -121.5}
+        - {x: 106, y: -14.5}
+        - {x: 106, y: 79.5}
+      - - {x: 31, y: -104.5}
+        - {x: 33, y: -106.5}
+        - {x: 36, y: -105.5}
+        - {x: 36, y: -100.5}
+        - {x: 34, y: -98.5}
+        - {x: 31, y: -99.5}
+      - - {x: 67, y: -0.5}
+        - {x: 70, y: -0.5}
+        - {x: 73, y: 0.5}
+        - {x: 73, y: 8.5}
+        - {x: 67, y: 8.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

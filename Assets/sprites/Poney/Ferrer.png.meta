@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: d0355c28b33012647a1412728f7e92c3
+timeCreated: 1454252879
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ferrer_0
+    21300002: Ferrer_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Ferrer_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 27
+        width: 215
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.5, y: -106.5}
+        - {x: 69.5, y: -106.5}
+        - {x: 107.5, y: -29.5}
+        - {x: 107.5, y: 106.5}
+        - {x: -28.5, y: 106.5}
+        - {x: -107.5, y: 68.5}
+        - {x: -107.5, y: -65.5}
+        - {x: -79.5, y: -106.5}
+        - {x: -60.5, y: -106.5}
+        - {x: -42.5, y: -105.5}
+        - {x: -34.5, y: -85.5}
+        - {x: -31.5, y: -97.5}
+        - {x: -29.5, y: -100.5}
+        - {x: -15.5, y: -100.5}
+        - {x: -12.5, y: -99.5}
+        - {x: -8.5, y: -96.5}
+        - {x: -6.5, y: -84.5}
+        - {x: 3.5, y: -104.5}
+        - {x: 5.5, y: -106.5}
+        - {x: 24.5, y: -106.5}
+        - {x: 32.5, y: -104.5}
+        - {x: 35.5, y: -91.5}
+        - {x: 33.5, y: -104.5}
+      - - {x: 80.5, y: 18.5}
+        - {x: 80.5, y: 17.5}
+        - {x: 83.5, y: 14.5}
+        - {x: 86.5, y: 15.5}
+        - {x: 86.5, y: 18.5}
+        - {x: 84.5, y: 20.5}
+        - {x: 82.5, y: 20.5}
+    - name: Ferrer_3
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 23
+        width: 216
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83, y: -32}
+        - {x: 108, y: 31}
+        - {x: 108, y: 106}
+        - {x: 101, y: 111}
+        - {x: 8, y: 111}
+        - {x: -108, y: 40}
+        - {x: -108, y: -89}
+        - {x: -104, y: -97}
+        - {x: -86, y: -111}
+        - {x: -58, y: -111}
+        - {x: -35, y: -107}
+        - {x: -37, y: -99}
+        - {x: -38, y: -82}
+        - {x: -37, y: -92}
+        - {x: -36, y: -104}
+        - {x: -34, y: -111}
+        - {x: 83, y: -111}
+        - {x: 89, y: -78}
+        - {x: 72, y: -66}
+        - {x: 69, y: -68}
+      - - {x: -6, y: -78}
+        - {x: -9, y: -79}
+        - {x: -9, y: -84}
+        - {x: -7, y: -85}
+        - {x: -5, y: -85}
+        - {x: -3, y: -82}
+        - {x: -3, y: -80}
+        - {x: -4, y: -78}
+      - - {x: -5, y: -66}
+        - {x: -3, y: -68}
+        - {x: 0, y: -67}
+        - {x: 0, y: -64}
+        - {x: -2, y: -62}
+        - {x: -5, y: -63}
+      - - {x: 69, y: 17}
+        - {x: 71, y: 15}
+        - {x: 74, y: 16}
+        - {x: 74, y: 19}
+        - {x: 72, y: 21}
+        - {x: 69, y: 20}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
